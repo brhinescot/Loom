@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="activeMapCodeGenConfiguration" type="Loom.Data.Mapping.Configuration.ActiveMapCodeGenConfigurationSection, Loom.Data.Mapping"/>
+  </configSections>
+  <activeMapCodeGenConfiguration>
+    <provider
+      name="AdventureWorksDataSession"
+      type="Loom.Data.Mapping.Providers.SqlServerProvider, Loom.Data.Mapping"
+      connectionString="Data Source=(local)\DEVELOPMENT; Database=AdventureWorks2012; Integrated Security=true;"/>
+    <codeGen baseNamespace="AdventureWorks" useNullableTypes="true"/>
+    <auditMapping modifiedOnColumn="ModifiedDate"/>
+    <enumTables>
+      <add name="ScrapReason" owner="Production" exclude="false"/>
+      <add name="ShipMethod" owner="Purchasing"  exclude="false"/>
+    </enumTables>
+    <tables enableAutoVersioning="true">
+      <add name ="Mount" owner="Test" localizableColumns="Description;Name" localizationTableSchema="Test" localizationTableName="MountTranslations"/>
+      <add name="TestExcludeTable" exclude="true"/>
+      <add name="NonExcludeTable" exclude="false"/>
+      <add name="CreditCard" owner="Sales" charAsBooleanColumns="Accepted" exclude="false"/>
+      <add name="Employee" owner="HumanResources" baseTableSchema="Person" baseTableName="BusinessEntity" />
+    </tables>
+  </activeMapCodeGenConfiguration>
+</configuration>

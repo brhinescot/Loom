@@ -1,0 +1,14 @@
+﻿/* Bootstrap Square Theme */
+.btn, .form-control, .dropdown-menu, .input-group-addon, .nav-tabs > li > a, .nav-pills > li > a, .navbar, .breadcrumb, .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span, .pager li > a, .pager li > span, .label, .thumbnail, .alert, .progress, .list-group-item:first-child, .list-group-item:last-child, .panel, .panel-heading, .well, .modal-content, .popover, .popover-title {
+    -webkit-border-radius: 0;
+    background-clip: padding-box;
+    border-radius: 0;
+    /* stops bg color from leaking outside the border: */
+}
+
+.badge {
+    -webkit-border-radius: 0;
+    background-clip: padding-box;
+    border-radius: 0;
+    /* stops bg color from leaking outside the border: */
+}

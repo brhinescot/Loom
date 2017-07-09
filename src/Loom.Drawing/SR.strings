@@ -1,0 +1,7 @@
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom.Drawing.Resources
+
+[strings]
+ThumbnailSizeOutOfRange = The maximum size of the thumbnail is out of range.
+ThumbnailHeightOutOfRange = The maximum height of the thumbnail is out of range.
+ThumbnailWidthOutOfRange = The maximum width of the thumbnail is out of range.

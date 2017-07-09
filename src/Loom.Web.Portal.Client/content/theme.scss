@@ -1,0 +1,42 @@
+﻿$accent: #8f4728; 
+$accent-text: #fff;
+
+$accent-lighten: lighten($accent, 10%);
+$accent-darken: darken($accent, 5.5%);
+
+a{
+    color: $accent;
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus, 
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus{
+    background-color: $accent;
+    color: $accent-text;
+}
+ 
+.btn-primary {
+    background-color: $accent;
+    border-color: $accent-darken;
+    color: $accent-text; 
+    &:hover, 
+    &:focus, 
+    &:active, 
+    &.active {
+        background-color: darken($accent, 8.2%);
+        border-color: darken($accent, 17%);
+    }
+}
+
+
+.tiles {
+    .tile {
+        background-color: $accent;
+        color: $accent-text;
+        &.press {
+            background-color: $accent-lighten;
+        }
+    }
+}

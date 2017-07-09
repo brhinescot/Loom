@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.devinterop.com/framework/data/active/tests" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.devinterop.com/framework/data/active/tests" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.devinterop.com/framework/data/active/tests">
+      <s:import />
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetProduct">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductResult" type="Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductPhotos">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProductPhotosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductPhotosResult" type="ProductPhoto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateProduct">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateProductResult" type="Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCustomerBasic">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateCustomerBasicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateCustomerBasicResult" type="tns:CustomerBasic" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustomerBasic">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="Guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" id="Production_Product">
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element name="ProductID" type="s:int" />
+          <s:element name="Name" type="s:string" />
+          <s:element name="ProductNumber" type="s:string" />
+          <s:element name="MakeFlag" type="s:boolean" />
+          <s:element name="FinishedGoodsFlag" type="s:boolean" />
+          <s:element name="Color" nillable="true" type="s:string" />
+          <s:element name="SafetyStockLevel" type="s:short" />
+          <s:element name="ReorderPoint" type="s:short" />
+          <s:element name="StandardCost" type="s:decimal" />
+          <s:element name="ListPrice" type="s:decimal" />
+          <s:element name="Size" nillable="true" type="s:string" />
+          <s:element name="SizeUnitMeasureCode" nillable="true" type="s:string" />
+          <s:element name="WeightUnitMeasureCode" nillable="true" type="s:string" />
+          <s:element name="Weight" nillable="true" type="s:decimal" />
+          <s:element name="DaysToManufacture" type="s:int" />
+          <s:element name="ProductLine" nillable="true" type="s:string" />
+          <s:element name="Class" nillable="true" type="s:string" />
+          <s:element name="Style" nillable="true" type="s:string" />
+          <s:element name="ProductSubcategoryID" nillable="true" type="s:int" />
+          <s:element name="ProductModelID" nillable="true" type="s:int" />
+          <s:element name="SellStartDate" type="s:dateTime" />
+          <s:element name="SellEndDate" nillable="true" type="s:dateTime" />
+          <s:element name="DiscontinuedDate" nillable="true" type="s:dateTime" />
+          <s:element name="rowguid" type="s1:Guid" />
+          <s:element name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductPhoto">
+        <s:sequence>
+          <s:element name="ProductPhotoID" type="s:int" />
+          <s:element name="ThumbNailPhoto" nillable="true" type="s:string" />
+          <s:element name="ThumbnailPhotoFileName" nillable="true" type="s:string" />
+          <s:element name="LargePhoto" nillable="true" type="s:string" />
+          <s:element name="LargePhotoFileName" nillable="true" type="s:string" />
+          <s:element name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductPhotosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductPhotos" />
+  </wsdl:message>
+  <wsdl:message name="GetProductPhotosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductPhotosResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateProductSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateProduct" />
+  </wsdl:message>
+  <wsdl:message name="CreateProductSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerBasicSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCustomerBasic" />
+  </wsdl:message>
+  <wsdl:message name="CreateCustomerBasicSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCustomerBasicResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ActiveMapTestsSoap">
+    <wsdl:operation name="GetProduct">
+      <wsdl:input message="tns:GetProductSoapIn" />
+      <wsdl:output message="tns:GetProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPhotos">
+      <wsdl:input message="tns:GetProductPhotosSoapIn" />
+      <wsdl:output message="tns:GetProductPhotosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <wsdl:input message="tns:CreateProductSoapIn" />
+      <wsdl:output message="tns:CreateProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerBasic">
+      <wsdl:input message="tns:CreateCustomerBasicSoapIn" />
+      <wsdl:output message="tns:CreateCustomerBasicSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActiveMapTestsSoap" type="tns:ActiveMapTestsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPhotos">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProductPhotos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerBasic">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateCustomerBasic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActiveMapTestsSoap12" type="tns:ActiveMapTestsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProduct">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPhotos">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProductPhotos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomerBasic">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateCustomerBasic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActiveMapTests">
+    <wsdl:port name="ActiveMapTestsSoap" binding="tns:ActiveMapTestsSoap">
+      <soap:address location="http://localhost:8080/ActiveMapTests.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActiveMapTestsSoap12" binding="tns:ActiveMapTestsSoap12">
+      <soap12:address location="http://localhost:8080/ActiveMapTests.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

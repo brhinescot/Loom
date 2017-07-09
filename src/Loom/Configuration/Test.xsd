@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="typeLoaderSettings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ignoreType">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

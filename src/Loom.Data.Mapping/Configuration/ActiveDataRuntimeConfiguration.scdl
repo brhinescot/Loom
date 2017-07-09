@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Loom.Data.Mapping.Configuration id="ActiveDataRuntime" xmlNamespace="urn:schemas-colossusinteractive-com:activedata-runtime">
+  <activeMapConfiguration>
+    <sessionProviders defaultProvider="portal">
+      <add name=""
+         type=""
+         connectionStringName=""/>
+    </sessionProviders>
+    <localization defaultLocale="en-US" supportedLanguages="en-US"/>
+  </activeMapConfiguration>
+</Loom.Data.Mapping.Configuration>

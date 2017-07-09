@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="false" Inherits="Loom.Web.Portal.UI.PortalView" ViewTemplate="Site" %>

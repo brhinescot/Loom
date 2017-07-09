@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Duplicator Test</title>
+
+    <script src="jquery-2.0.3.js" type="text/javascript"></script>
+    <script src="jquery-duplicate.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div>
+    <p class="one">
+        <label>original</label>
+        <input id="one" class="test" type="text"/>
+        <img class="rem" src="MB_0030_delete.png" alt="Remove" title="Remove"/>
+    </p>
+</div>
+<hr/><br/>
+<div>
+    <p class="two">
+        <label>original</label>
+        <input id="two" class="test" type="text"/>
+        <img class="rem" src="MB_0030_delete.png" alt="Remove" title="Remove"/>
+    </p>
+</div>
+
+<a href="#">.</a>
+
+<script type="text/javascript">
+    $(function() {
+        $('.test').duplicate({
+            remover: function(tmpl) {
+                return $('.rem', tmpl);
+            },
+            autoDuplicate: false,
+            maxDuplicates: 5,
+            duplicated: function(tmpl, i) {
+                $(tmpl).find('label').text('duplicate ' + i);
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿// Black & White
+//
+// Usage;
+//  .my-class{
+//      background:black(0.15);
+//      color:white(0.9);
+//  }
+@function black($opacity){
+	@return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+	@return rgba(255,255,255,$opacity)
+}

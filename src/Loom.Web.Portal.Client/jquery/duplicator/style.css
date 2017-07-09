@@ -1,0 +1,96 @@
+/*[fmt]1A90-0A0A-3*/
+/*+init {*/
+* {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, th { font-weight: inherit; }
+
+address, cite, dfn, var { font-style: inherit; }
+
+caption, code, kbd, pre, samp, tt, input, textarea, select, button { font-family: inherit; }
+
+table { border-spacing: 0; }
+
+th { text-align: left; }
+
+html, body, thead, tbody, tfoot, tr, th, td, br { position: static; }
+
+input[type=hidden] { display: none !important; }
+
+fieldset, a img { border: 0; }
+
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+/*+}*/
+
+body {
+    background-color: #000000;
+    margin: 12px;
+}
+
+body a { color: #000000; }
+
+p {
+    color: #FFFFFF;
+    font-family: sans-serif;
+    height: 111px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    width: 519px;
+}
+
+.two.duplicate-active { background-color: #F4AA00; }
+
+.one.duplicate-inserted { background-color: #249CCB; }
+
+p label {
+    font-size: 6em;
+    left: -12px;
+    /*+placement:shift -12px -51px;*/
+    position: relative;
+    top: -51px;
+}
+
+.duplicate-first label { color: #5ACB24; }
+
+.two.duplicate-inserted label { color: #FFFFFF; }
+
+.duplicate-active label { color: #FFFFFF; }
+
+.duplicate-source {
+    border: 0;
+    bottom: 12px;
+    left: 12px;
+    padding: 2px;
+    /*+placement:anchor-bottom-left 12px 12px;*/
+    position: absolute;
+    width: 491px;
+}
+
+.duplicate-remover {
+    height: 32px;
+    /*+placement:anchor-top-right -5px -4px;*/
+    position: absolute;
+    right: -5px;
+    top: -4px;
+    width: 32px;
+}
+
+.one.duplicate-active { background-color: #5ACB24; }
+
+.two.duplicate-inserted { background-color: #C50000; }
+
+.two.duplicate-active label { color: #C50000; }
+
+p a {
+    color: red;
+    margin-left: 179px;
+}

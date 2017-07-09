@@ -1,0 +1,60 @@
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom
+
+[strings]
+ExceptionDetails = Exception Details:
+ExceptionSummary =	Environment Summary for	
+ExceptionType = Exception Type		
+ExceptionStackTraceDetails = StackTrace:
+
+# EXCEPTIONS
+ExceptionByteArrayValueMustBeGreaterThanZeroBytes = The value must be greater than 0 bytes.
+ExceptionCastingHashAlgorithmInstance = Type must inherit from HashAlgorithm.
+ExceptionCastingSymmetricAlgorithmInstance = Type must inherit from SymmetricAlgorithm.
+ExceptionCreatingHashAlgorithmInstance = Unable to load algorithm.
+ExceptionCreatingSymmetricAlgorithmInstance = Unable to load algorithm.
+ExceptionDecrypting = Unable to decrypt data.
+ExceptionEmptyString(string variableName) = The value of '{0}' can not be an empty string.
+ExceptionEnumerationNotDefined(string variable, string enumName) = {0} is not a valid value for {1}.
+ExceptionExpectedType(string typeName) = The type is invalid. Expected type '{0}'.
+ExceptionInvalidType(string typeName) = The type '{0}' specified is not valid..
+ExceptionInvalidNullNameArgument(string messageName) = The name for the '{0}' can not be null or an empty string.
+ExceptionObjectDisposedCanNotRenew = The object has been disposed and can not be renewed.
+ExceptionTimeoutWaitingForLock = Timeout waiting for thread lock.
+ExceptionItemCountMustBeGreaterThanZero = The number of items must be greater than zero.
+ExceptionFileNotFound(string fileName) = Could not find file named {0}.
+ExceptionArgumentMustBeNonNegative = Value can not be less than zero.
+ExceptionArgumentMustBeGreaterThanZero = Value must be greater than zero.
+ExceptionNonParsablePhoneNumber = The phone number is not in a parsable format.
+ExceptionPropertyNotNull = Property can not be null.
+ExceptionServerBindingIsNull = The server binding is null. Unable to continue.
+ExceptionDelimitedArrayIndexOutOfBounds(int index) = Index '{0}' was outside the bounds of the delimited array segment.
+ExceptionArgArrayPlusOffTooSmall = Destination array is not long enough to copy all the items in the collection. Check array index and length.
+ExceptionArgInvalidArrayType = Target array type is not compatible with the type of items in the collection.
+ExceptionNotSupportedReadOnlyCollection = Collection is read-only.
+ExceptionArgumentWrongType(string value, Type type) = The value "{0}" is not of type "{1}" and cannot be used in this generic collection.
+PasswordLessThanMinimumLength(int length) = Password length can not be less than {0}.
+ExceptionObjectDisposed(string name, string member) = The object {0} has been disposed. A call to {1} is not allowed.
+ExceptionDefaultImplementationNotFound(string typeName) = Could not locate a default implementation for type {0}.
+ExceptionTypeAlreadyRegistered(string typeName) = The type {0} has already been registered.
+ExceptionNoConstructorsDefined(string typeName) = The type {0} has no constructors defined.
+ExceptionInvalidCastFromTo(string from, string to) = Invalid cast from '{0}' to '{1}'.
+
+#EXPRESSIONS
+ExpressionMoney = ^\$?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$
+ExpressionAnyDigits = ^\d{1,}$
+ExpressionZipCode = ^(\d{5}-\d{4}|\d{5})$|^([a-zA-Z]\d[a-zA-Z] \d[a-zA-Z]\d)$
+ExpressionEmailAddress = ^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9_\-]+\.)+))(com|net|org|cc|us|edu)(\]?)$
+ExpressionCityName = ^[a-zA-Z\s\.\-]{1,}$
+ExpressionNotMalicious = ^([A-Za-z0-9@.\s\[\]/]{1,255})$
+ExpressionWordsOnly = ^([\(\)/&A-Za-z0-9'#@.\s,-]{1,255})$
+ExpressionIpAddress = ((25[0-5]|2[0-4]\d|1?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|1?\d{1,2})
+ExpressionSocialSecurityNUmber = ^(?!000)(?!588)(?!666)(?!69[1-9])(?!73[4-9]|7[4-5]\d|76[0-3])(?<SSN3>[0-6]\d{2}|7(?:[0-6]\d|7[012]))([-]?)(?!00)(?<SSN2>\d\d)\1(?!0000)(?<SSN4>\d{4})$
+ExpressionGuid = ^(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}$
+ExpressionPhoneNumber = ^\+?(?<countrycode>\d{0,5})\s?\(?(?<areacode>[2-9]\d{2})(?:\)\s?|-|.)(?<exchange>\d{3})(?:-|.)(?<number>\d{4})(?:\s*?[xX]\s*(?<extension>\d{1,5}))?$
+ExpressionHighStrongPassword = ^.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W+).*$
+ExpressionMediumStrongPassword = (?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
+ExpressionLowStrongPassword = ^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$
+
+InvalidHexString = String must represent a valid hexadecimal (e.g. : 0F99DD).
+GenericInvalidData = Invalid data.

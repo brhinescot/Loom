@@ -1,0 +1,7 @@
+﻿<Loom.Web.Configuration>
+  <pageViewScriptBlockerSettings requestCycleSeconds="15" maxRequestsPerCycle="30" banMinutes="60" extension=".aspx">
+    <extensions>
+      <add extension=".aspx"/>
+    </extensions>
+  </pageViewScriptBlockerSettings>
+</Loom.Web.Configuration>

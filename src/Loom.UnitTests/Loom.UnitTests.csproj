@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5696A27F-C21C-43E3-B25F-0AA482E09E34}</ProjectGuid>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loom</RootNamespace>
+    <AssemblyName>Loom.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>da154bbd</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentAssertions">
+      <HintPath>..\packages\FluentAssertions.2.1.0.0\lib\net40\FluentAssertions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.extensions">
+      <HintPath>..\packages\NUnit.Extensions.2.6.0.0\lib\net40\nunit.extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.3.13283, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter">
+      <HintPath>..\packages\NUnitTestAdapter.1.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedProductInfo.cs">
+      <Link>Properties\SharedProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedVersionInfo.cs">
+      <Link>Properties\SharedVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ArgumentTests.cs" />
+    <Compile Include="ArrayExtensionsTests.cs" />
+    <Compile Include="Collections\AutoKeyDictionaryTests.cs" />
+    <Compile Include="Collections\AutoStringDictionaryTests.cs" />
+    <Compile Include="Collections\CircularQueue%271Tests.cs" />
+    <Compile Include="Collections\ListExtensionTests.cs" />
+    <Compile Include="Collections\MultiLevelComparer%271Tests.cs" />
+    <Compile Include="Collections\MultiMapTests.cs" />
+    <Compile Include="Collections\MutableLookupTests.cs" />
+    <Compile Include="Collections\RecursiveSearch%271Tests.cs" />
+    <Compile Include="Collections\Tree%271Tests.cs" />
+    <Compile Include="AssertTests.cs" />
+    <Compile Include="Collections\DataValueCollectionTests.cs" />
+    <Compile Include="ConsoleSpinnerTests.cs" />
+    <Compile Include="Cryptography\CryptographyUtilityTests.cs" />
+    <Compile Include="Cryptography\HashProviderTests.cs" />
+    <Compile Include="Cryptography\SymmetricCryptographyProviderTests.cs" />
+    <Compile Include="Data\Mapping\ActiveDataSharedSessionTestBase.cs" />
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\AdventureWorks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\AdventureWorksDataSession.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\FunctionTests.cs" />
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ErrorLog.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\AlphabeticalListOfProducts.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductCategory.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Authors.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\AWBuildVersion.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Byroyalty.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Categories.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\CategorySalesFor1997.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsArticle.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsArticleAttachment.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsArticleTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsArticleType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsCategoryImage.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsFaq.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsFaqQuestion.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsFaqQuestionTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsImage.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsImageType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsItemType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsMetaBag.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsMetaField.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsMetaFieldOption.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsMetaFieldValue.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsMetaFieldValueTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\CmsProductImage.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\CodeGen\CodeFormatToCamelTests.cs" />
+    <Compile Include="Data\Mapping\CodeGen\CodeFormatToPascalTests.cs" />
+    <Compile Include="Data\Mapping\CodeGen\SerializationTests.cs" />
+    <Compile Include="Data\Mapping\CodeGen\TableInfoTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\DisconnectedPredicateTests.cs" />
+    <Compile Include="Data\Mapping\Generated\Northwind\CurrentProductList.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\CustomerAndSuppliersByCity.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\CustomerCustomerDemo.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\CustomerDemographics.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Customers.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\DatabaseLog.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\DatabaseVersion.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Discounts.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Employee.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Employees.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\EmployeeTerritories.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\ExtensionsForIEnumerable.cs" />
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesDepartment.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesEmployee.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesEmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesEmployeePayHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesJobCandidate.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesShift.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesUspUpdateEmployeeHireInfo.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesUspUpdateEmployeeLogin.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesUspUpdateEmployeePersonalInfo.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVEmployee.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVEmployeeDepartment.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVEmployeeDepartmentHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVJobCandidate.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVJobCandidateEducation.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\HumanResourcesVJobCandidateEmployment.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\InternalTests\UpdatePropertyTests.cs" />
+    <Compile Include="Data\Mapping\Generated\Northwind\Invoices.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Jobs.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\MultiThreaded\ThreadedQueryTests.cs" />
+    <Compile Include="Data\Mapping\Generated\Northwind\Northwind.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\NorthwindDataSession.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\OmniMount.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductDataSession.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\OrderDetails.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\OrderDetailsExtended.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Orders.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\OrdersQry.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\OrderSubtotals.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonAddress.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonAddressType.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonBusinessEntity.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonBusinessEntityAddress.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonBusinessEntityContact.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonContactType.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonCountryRegion.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonEmailAddress.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonPassword.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonPerson.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonPersonPhone.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonPhoneNumberType.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonStateProvince.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonVAdditionalContactInfo.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PersonVStateProvinceCountryRegion.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalApplication.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalContact.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalDomain.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalEmbed.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalLocalization.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalMenu.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalModuleDefinition.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalPageColumn.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalPageDefinition.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalRedirect.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalRole.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalRoute.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalRouteType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalSetting.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\PortalUser.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionAttachment.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionAward.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionAwardTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionBillOfMaterials.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionCategory.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionCategoryTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionCulture.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionDocument.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionIllustration.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionLocation.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionMountSize.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProduct.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductAccessory.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductAdapter.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductAttachment.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductAward.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductCategory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductCompatibility.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductCostHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductDescription.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductDocument.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductEmbed.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductInventory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductListPriceHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductModel.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductModelIllustration.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductModelProductDescriptionCulture.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductMountSize.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductPhoto.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductProductPhoto.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductReview.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionProductSubcategory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductTool.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductTour.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductUpsale.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductVariant.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionProductVesaPattern.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionScrapReason.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionTool.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionToolTranslation.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionTour.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionTransactionHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionTransactionHistoryArchive.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionUnitMeasure.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\ProductionVesaPattern.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionVProductAndDescription.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionVProductModelCatalogDescription.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionVProductModelInstructions.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionWorkOrder.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\ProductionWorkOrderRouting.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Products.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\ProductsAboveAveragePrice.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\ProductSalesFor1997.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\ProductsByCategory.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Providers\SqlCommandWriterTests.cs" />
+    <Compile Include="Data\Mapping\Providers\SqlServerCommandBuilderTests.cs" />
+    <Compile Include="Data\Mapping\Generated\Pubs\Publishers.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Pubs.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\PubsDataSession.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Pub_info.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingProductVendor.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingPurchaseOrderDetail.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingPurchaseOrderHeader.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingShipMethod.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingVendor.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingVVendorWithAddresses.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\PurchasingVVendorWithContacts.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\QuarterlyOrders.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateContainsTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateEqualTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateEqualToAnyTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateEqualToNoneTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateGreaterTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateIgnoreTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateLessThanOrEqualTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateLessThanTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateNotEqualTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateStartsWithTests.cs" />
+    <Compile Include="Data\Mapping\ColumnPredicates\ColumnPredicateTests.cs" />
+    <Compile Include="Data\Mapping\Query\ConstraintTests.cs" />
+    <Compile Include="Data\Mapping\Query\AutoJoinTests.cs" />
+    <Compile Include="Data\Mapping\Query\LocalizableTests.cs" />
+    <Compile Include="Data\Mapping\Query\ManualJoinTests.cs" />
+    <Compile Include="Data\Mapping\Query\NullColumnTests.cs" />
+    <Compile Include="Data\Mapping\Query\OrderByTests.cs" />
+    <Compile Include="Data\Mapping\Query\PagingTests.cs" />
+    <Compile Include="Data\Mapping\Query\SelectAggregateTests.cs" />
+    <Compile Include="Data\Mapping\Query\SelectColumnTests.cs" />
+    <Compile Include="Data\Mapping\Query\SelectDistinctTests.cs" />
+    <Compile Include="Data\Mapping\Query\WhereTests.cs" />
+    <Compile Include="Data\Mapping\Generated\Northwind\Region.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Reptq3.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Roysched.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Sales.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesAddress.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesAgeRange.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\SalesByCategory.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesCompany.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesCompanyAddress.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesCompanyProduct.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesCompanyType.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesCountry.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesCountryRegionCurrency.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesCreditCard.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesCurrency.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesCurrencyRate.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesCustomer.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesIncomeRange.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesManufacturer.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesManufacturerProduct.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesManufacturerProductVesaPattern.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesNewsletter.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesNewsletterContact.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesPersonCreditCard.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesProductRegistration.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesOrderDetail.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesOrderHeader.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesOrderHeaderSalesReason.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesPerson.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesPersonQuotaHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesReason.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesTaxRate.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesTerritory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSalesTerritoryHistory.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesShoppingCartItem.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSpecialOffer.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesSpecialOfferProduct.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesState.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesStore.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\SalesThirdPartyMount.cs">
+      <DependentUpon>OmniMount.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\SalesTotalsByAmount.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVIndividualCustomer.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVPersonDemographics.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVSalesPerson.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVSalesPersonSalesByFiscalYears.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVStoreWithAddresses.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVStoreWithContacts.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\SalesVStoreWithDemographics.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Repository\RepositoryBase%271.cs" />
+    <Compile Include="Data\Mapping\Schema\AtrributeTest.cs" />
+    <Compile Include="Data\Mapping\Generated\Northwind\Shippers.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Stores.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\SummaryOfSalesByQuarter.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\SummaryOfSalesByYear.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Suppliers.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Northwind\Territories.cs">
+      <DependentUpon>Northwind.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\OmniMount\TestMount.cs" />
+    <Compile Include="Data\Mapping\Generated\OmniMount\TestMountTranslations.cs" />
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\TestStringPrimaryKey.cs" />
+    <Compile Include="Data\Mapping\Generated\Pubs\Titleauthor.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Titles.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\Pubs\Titleview.cs">
+      <DependentUpon>Pubs.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\uspGetBillOfMaterials.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\uspGetEmployeeManagers.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\uspGetManagerEmployees.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\uspGetWhereUsedProductID.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\uspLogError.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Data\Mapping\Generated\AdventureWorks\UspSearchCandidateResumes.cs">
+      <DependentUpon>AdventureWorks.map</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Mapping\ThreadedTestBase.cs" />
+    <Compile Include="Data\Mapping\Util.cs" />
+    <Compile Include="Data\DataTableAdapterTests.cs" />
+    <Compile Include="Data\Diff\CollectionDiffTests.cs" />
+    <Compile Include="Data\Diff\DiffTests.cs" />
+    <Compile Include="Data\TestCustomer.cs" />
+    <Compile Include="DateTimeExtensionsTests.cs" />
+    <Compile Include="DelimitedArrayTests.cs" />
+    <Compile Include="Ioc\IocContainerSingletonTests.cs" />
+    <Compile Include="OldFileAssert.cs" />
+    <Compile Include="Documents\PdfFormTests.cs" />
+    <Compile Include="Drawing\HslTests.cs" />
+    <Compile Include="Drawing\ImageTemplateTests.cs" />
+    <Compile Include="Drawing\ThumbnailTests.cs" />
+    <Compile Include="DynamicTests.cs" />
+    <Compile Include="Dynamic\DynamicComparerStructTests.cs" />
+    <Compile Include="Dynamic\DynamicComparerTests.cs" />
+    <Compile Include="Dynamic\DynamicPropertyTests.cs" />
+    <Compile Include="Dynamic\DynamicType%271SetterTests.cs" />
+    <Compile Include="Dynamic\DynamicType%271Tests.cs" />
+    <Compile Include="Dynamic\EntityConverterTests.cs" />
+    <Compile Include="Dynamic\PropertyGetter%272Tests.cs" />
+    <Compile Include="Dynamic\PropertySetter%272Tests.cs" />
+    <Compile Include="Dynamic\ScrapReason.cs" />
+    <Compile Include="Dynamic\TestClass.cs" />
+    <Compile Include="Dynamic\TestStruct.cs" />
+    <Compile Include="Dynamic\WorkOrder.cs" />
+    <Compile Include="EntityPoolTests.cs" />
+    <Compile Include="EnumDescriptionAttributeTests.cs" />
+    <Compile Include="EnumerableExtensionsTests.cs" />
+    <Compile Include="ExceptionFormatterTests.cs" />
+    <Compile Include="Extensibility\TypeLoaderTests.cs" />
+    <Compile Include="Extensions\DateTimeExtensionsTests.cs" />
+    <Compile Include="Extensions\StringExtensionsTests.cs" />
+    <Compile Include="FormattableObjectTests.cs" />
+    <Compile Include="IfTests.cs" />
+    <Compile Include="Ioc\IocContainerInstanceTests.cs" />
+    <Compile Include="IO\ArrayFileTests.cs" />
+    <Compile Include="IO\FileInfoExtensionTests.cs" />
+    <Compile Include="ListExtensionTests.cs" />
+    <Compile Include="ListSpeedTests.cs" />
+    <Compile Include="Media\Meta\ID3\ID3TagEditorTests.cs" />
+    <Compile Include="Media\WmfMetaReaderTests.cs" />
+    <Compile Include="Media\WmfWriterTests.cs" />
+    <Compile Include="Mocks\MockExceptionThrower.cs" />
+    <Compile Include="MonthTests.cs" />
+    <Compile Include="Net\Mail\TemplatedMailMessageTests.cs" />
+    <Compile Include="Net\Servers\MessageReceivedEventArgs.cs" />
+    <Compile Include="Net\Servers\MockServer.cs" />
+    <Compile Include="Net\Servers\MockSessionProcessor.cs" />
+    <Compile Include="Net\Servers\ServerTests.cs" />
+    <Compile Include="NullableExtensionTests.cs" />
+    <Compile Include="NullRepositoryTests.cs" />
+    <Compile Include="ObjectExtensionTests.cs" />
+    <Compile Include="PhoneNumberTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RandomDataTests.cs" />
+    <Compile Include="Security\CryptoRandomTests.cs" />
+    <Compile Include="Security\PasswordTests.cs" />
+    <Compile Include="Security\ValidationProviderTests.cs" />
+    <Compile Include="Threading\ProcessQueueTest.cs" />
+    <Compile Include="Threading\SemaphoreLockTests.cs" />
+    <Compile Include="Threading\TimedLockTest.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Web\HttpCookieExtensionsTests.cs" />
+    <Compile Include="Web\IO\WebFileTests.cs" />
+    <Compile Include="Web\IO\WebPathTests.cs" />
+    <Compile Include="Web\JavaScriptSerializerTests.cs" />
+    <Compile Include="Web\Portal\Routing\RouteParserCaptureTests.cs" />
+    <Compile Include="Web\Portal\Routing\RouteParserMatchTests.cs" />
+    <Compile Include="Web\Portal\Routing\RouteTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web\UI\JsonSerializerTests.cs" />
+    <Compile Include="Web\UI\WebControls\ControlExtensionsTests.cs" />
+    <Compile Include="WeekTests.cs" />
+    <Compile Include="Windows\Forms\ShortcutTextBoxTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Mapping\Generated\AdventureWorks\AdventureWorks.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Generator>LoomDataGenerator</Generator>
+      <LastGenOutput>AdventureWorks.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Mapping\App.config" />
+    <None Include="Data\Mapping\Generated\Northwind\Northwind.map">
+      <Generator>ActiveDataGenerator</Generator>
+      <LastGenOutput>Northwind.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Mapping\Generated\OmniMount\OmniMount.map">
+      <Generator>ActiveDataGenerator</Generator>
+      <LastGenOutput>OmniMount.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Mapping\Generated\Pubs\Pubs.map">
+      <Generator>ActiveDataGenerator</Generator>
+      <LastGenOutput>Pubs.cs</LastGenOutput>
+    </None>
+    <None Include="Documents\Template.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Drawing\Resources\Averaging Test Images\aboutfusion.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Autumnishereagain.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Autumn_in_Bristol2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Bonfire_Night_2004.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\california_sunset_lg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\ColourfulBugs.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\contentpic1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Dead_bodies_in_the%2520_woods.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Fairy%2520flowers.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Fairy%2520forest%25202.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Fairy%2520forest.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\fan.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\forest%2520fire%2520July%252016%2520night6.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\forest.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\forest2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\forestfire.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\gemsbok.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\jbcldfus.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Lake%2520Powell%2520sunset%25205.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Lilikes.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Matlockbynight.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Maura_volia_bouldering.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\NHT-%2520Through%2520forest%2520-%252010th%2520Line.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Nonamepark.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\prettystarcropped.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Reading_uni_lake.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Stonehenge_Noon.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\sunset-hi.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Sunset.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\sunset56.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\Thewatchfuleye.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\Averaging Test Images\untitled.bmp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Media\Meta\ID3\blind_willie.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Net\Mail\NoComments.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Net\Mail\SingleLineComments.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Net\Mail\MultiLineComments.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Net\Mail\TemplateLayout.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Net\Mail\TemplateContent.tpl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Drawing\Resources\Motion52.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Drawing\Resources\ULPT-L.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Media\04 Wish You Were Here.wma">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Media\AlbumArtSmall.jpg" />
+    <Content Include="Media\Folder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Mapping\Crud\" />
+    <Folder Include="Web\Portal\UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loom.CodeGeneration\Loom.CodeGeneration.csproj">
+      <Project>{fa52ca1e-c2bf-4469-bfb3-bcd246c35357}</Project>
+      <Name>Loom.CodeGeneration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Data.Mapping\Loom.Data.Mapping.csproj">
+      <Project>{4bad6cfd-1008-4857-a6fc-00f636098839}</Project>
+      <Name>Loom.Data.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Data\Loom.Data.csproj">
+      <Project>{c8eceffb-5041-4d4a-aafe-534d9556dee5}</Project>
+      <Name>Loom.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Documents\Loom.Documents.csproj">
+      <Project>{ca258424-3737-458c-9729-cc5118ee9cd8}</Project>
+      <Name>Loom.Documents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Drawing\Loom.Drawing.csproj">
+      <Project>{f960d46e-260b-4d45-b4a9-ce41018e19b5}</Project>
+      <Name>Loom.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Net\Loom.Net.csproj">
+      <Project>{14924c61-0135-4b3c-91b5-c660ead69242}</Project>
+      <Name>Loom.Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Reporting\Loom.Reporting.csproj">
+      <Project>{61408bd8-e01e-4d99-a6d7-d07f045e2dd7}</Project>
+      <Name>Loom.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web.Portal.Client\Loom.Web.Portal.Client.csproj">
+      <Project>{018ee86a-be88-4034-9d0e-4c58eda3509b}</Project>
+      <Name>Loom.Web.Portal.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web.Portal\Loom.Web.Portal.csproj">
+      <Project>{70f3a52e-ad69-4d80-a59a-86231d5f5167}</Project>
+      <Name>Loom.Web.Portal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web.Services\Loom.Web.Services.csproj">
+      <Project>{d2d31abf-44b8-4963-8ed0-6db9e8cb01c7}</Project>
+      <Name>Loom.Web.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web\Loom.Web.csproj">
+      <Project>{31ac047c-b7f3-4b3e-a163-9518399899df}</Project>
+      <Name>Loom.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Windows.Forms\Loom.Windows.Forms.csproj">
+      <Project>{a7d312dc-d8e5-494b-bad8-5fc8d854256b}</Project>
+      <Name>Loom.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom\Loom.csproj">
+      <Project>{49a9240f-c57e-4be4-af04-92229ac5eb1e}</Project>
+      <Name>Loom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

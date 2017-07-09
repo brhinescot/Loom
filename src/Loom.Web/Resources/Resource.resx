@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="IconRolloverImageButton" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP+AgID/AAD//wD/AP8A/////wAA//8A/////wD/////////
+        ///////////////////wAAAAAAAAD/+7u7u7u7sP/7siIiIguw//uzvr4rC7D/+78ysrD7sP/7v+PrDv
+        uw//u/7jDu+7D/+7/u7uD7sP/7v+7uOwuw//u////z+7D/+7u7u7u7sP/////////w//////////////
+        ////////
+</value>
+  </data>
+  <data name="IconRelationalDropDownList" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////6qq
+        qqqqqqqqcAAAAAAAAAp/////d3d3Cn////9/gIcKfwAA/38ABwp/////f///Cn8AAA9wAAAKf////3d3
+        dwp/AA//fwAHCn////9/gIcKf////3///wpwAAAAAAAACn////8ACAAKf////wCIgAp3d3d3AAAACqqq
+        qqqqqqqq
+</value>
+  </data>
+  <data name="IconRelationalListBox" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////6qq
+        qqqqqqqqqqqqqqqqqqpwAAAAAAAACn////93d3cKf////3+Ahwp/AAD/fwAHCn////9///8KfwAAD3AA
+        AAp/////d3d3Cn8AD/9/AAcKf////3+Ahwp/////f///Cnd3d3d3d3d6qqqqqqqqqqqqqqqqqqqqqqqq
+        qqqqqqqq
+</value>
+  </data>
+  <data name="SwapImagePreloadScript" xml:space="preserve">
+    <value>        DevInterop_PreloadSwapImages( DevInterop_Images ); </value>
+  </data>
+  <data name="DragDropSnap" xml:space="preserve">
+    <value>function cycleState(control) {
+    if (control.value == 'Hidden') {
+        control.style.backgroundColor = 'white';
+        control.style.borderColor = 'gray';
+        control.value = 'Optional';
+    }
+    else if (control.value == 'Required') {
+        control.style.backgroundColor = '#E0E0E0';
+        control.style.borderColor = 'gray';
+        control.value = 'Hidden';
+    }
+    else {
+        control.style.backgroundColor = 'yellow';
+        control.style.borderColor = 'gray';
+        control.value = 'Required';
+    }
+}
+
+function my_PickFunc() {
+    // Store position of the item about to be dragged
+    // so we can interchange positions of items when the drag operation ends
+    posOld = dd.obj.y;
+}
+
+function my_DropFunc() {
+    var y;
+    var newIndex = -1;
+    var emptyIndex = -1;
+    var totalHeight = 0;
+    // Calculate the snap position which is closest to the drop coordinates
+    for (var x = 0; x &lt; aElts.length; x++) {
+        if (dd.obj == aElts[x])
+            emptyIndex = x;
+        else if (dd.obj.y &lt; margTop)
+            newIndex = 0;
+        else if (dd.obj.y &gt;= aElts[x].y &amp;&amp; dd.obj.y &lt;= (aElts[x].y + dd.getDivH(aElts[x])))
+            newIndex = (x + 1);
+
+        totalHeight = totalHeight + dd.getDivH(aElts[x]);
+    }
+
+    if (newIndex == -1 &amp;&amp; dd.obj.y &gt;= totalHeight)
+        newIndex = aElts.length;
+    if (newIndex == -1)
+        newIndex = emptyIndex;
+
+    if (newIndex &gt; emptyIndex) {
+        newIndex--;
+        // Move up
+        var tempIndex = emptyIndex;
+        while (tempIndex &lt; newIndex) {
+            aElts[tempIndex] = aElts[tempIndex + 1];
+            tempIndex++;
+        }
+        aElts[newIndex] = dd.obj;
+    }
+    else {
+        // Move down
+        var tempIndex = emptyIndex;
+        while (tempIndex &gt; newIndex) {
+            aElts[tempIndex] = aElts[tempIndex - 1];
+            tempIndex--;
+        }
+        aElts[newIndex] = dd.obj;
+    }
+
+    positions = document.all ? document.all['$SURFACE$'] : document.getElementById('$SURFACE$');
+    positions.value = '';
+    var movePos = margTop;
+    for (var x = 0; x &lt;= aElts.length - 1; x++) {
+        aElts[x].moveTo($LEFT$, movePos);
+        movePos += dd.getDivH(aElts[x]) + 10;
+
+        if (positions.value == '')
+            positions.value = aElts[x].id;
+        else
+            positions.value += ',' + aElts[x].id;
+    }
+}</value>
+  </data>
+</root>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<xs:schema id="RelationalDataSet" targetNamespace="http://tempuri.org/RelationalDataSet.xsd"
+           xmlns:mstns="http://tempuri.org/RelationalDataSet.xsd" xmlns="http://tempuri.org/RelationalDataSet.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+           attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="RelationalDataSet" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element name="Parent">
+          <xs:complexType>
+            <xs:attribute name="ID" form="unqualified" type="xs:string" />
+            <xs:attribute name="ParentID" form="unqualified" type="xs:string" />
+            <xs:attribute name="Name" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Child">
+          <xs:complexType>
+            <xs:attribute name="ID" form="unqualified" type="xs:string" />
+            <xs:attribute name="ParentID" form="unqualified" type="xs:string" />
+            <xs:attribute name="Name" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GrandChild">
+          <xs:complexType>
+            <xs:attribute name="ID" form="unqualified" type="xs:string" />
+            <xs:attribute name="ParentID" form="unqualified" type="xs:string" />
+            <xs:attribute name="Name" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GrandChild2">
+          <xs:complexType>
+            <xs:attribute name="ID" form="unqualified" type="xs:string" />
+            <xs:attribute name="ParentID" form="unqualified" type="xs:string" />
+            <xs:attribute name="Name" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:key name="RelationalDataSetKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Parent" />
+      <xs:field xpath="@ID" />
+    </xs:key>
+    <xs:key name="RelationalDataSetKey2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Child" />
+      <xs:field xpath="@ID" />
+    </xs:key>
+    <xs:key name="RelationalDataSetKey3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GrandChild" />
+      <xs:field xpath="@ID" />
+    </xs:key>
+    <xs:key name="RelationalDataSetKey4" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GrandChild2" />
+      <xs:field xpath="@ID" />
+    </xs:key>
+    <xs:keyref name="ParentChild" refer="mstns:RelationalDataSetKey1">
+      <xs:selector xpath=".//mstns:Child" />
+      <xs:field xpath="@ParentID" />
+    </xs:keyref>
+    <xs:keyref name="ChildGrandChild" refer="mstns:RelationalDataSetKey2">
+      <xs:selector xpath=".//mstns:GrandChild" />
+      <xs:field xpath="@ParentID" />
+    </xs:keyref>
+    <xs:keyref name="ChildGrandChild2" refer="mstns:RelationalDataSetKey2">
+      <xs:selector xpath=".//mstns:GrandChild2" />
+      <xs:field xpath="@ParentID" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

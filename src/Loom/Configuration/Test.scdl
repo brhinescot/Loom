@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Loom.Configuration>
+  <typeLoaderSettings>
+    <ignoreType>
+      <add name="Cpp" />
+      <add name="AntiXss" />
+      <add name="System" />
+      <add name="Microsoft" />
+    </ignoreType>
+  </typeLoaderSettings>
+</Loom.Configuration>

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31AC047C-B7F3-4B3E-A163-9518399899DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loom.Web</RootNamespace>
+    <AssemblyName>Loom.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\Shared\Loom.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXSSLibrary">
+      <HintPath>..\..\lib\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedProductInfo.cs">
+      <Link>Properties\SharedProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedVersionInfo.cs">
+      <Link>Properties\SharedVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AssemblyResourceProvider.cs" />
+    <Compile Include="AssemblyResourceProviderModule.cs" />
+    <Compile Include="AssemblyResourceVirtualFile.cs" />
+    <Compile Include="BuildManagerWrapper.cs" />
+    <Compile Include="Caching\CacheExtensions.cs" />
+    <Compile Include="Caching\LocalizedCache.cs" />
+    <Compile Include="Configuration\DocumentRedirectConfiguration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocumentRedirectConfiguration.scdl</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\ErrorHandlingConfiguration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorHandlingConfiguration.scdl</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\PageViewScriptBlockerConfiguration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageViewScriptBlockerConfiguration.scdl</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\SupportEmailConfiguration.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupportEmailConfiguration.scdl</DependentUpon>
+    </Compile>
+    <Compile Include="HttpCookieExtensions.cs" />
+    <Compile Include="IBuildManager.cs" />
+    <Compile Include="PageViewScriptBlockerModule.cs" />
+    <Compile Include="ErrorHandlingModule.cs" />
+    <Compile Include="FileListCache.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HttpExtensions.cs" />
+    <Compile Include="HttpHandlerBase.cs" />
+    <Compile Include="Security\FormsUserIdentity.cs" />
+    <Compile Include="InvalidSessionException.cs" />
+    <Compile Include="IO\DiskOutputCache.cs" />
+    <Compile Include="IO\DiskOutputCacheConfig.cs" />
+    <Compile Include="IO\DiskOutputCacheModule.cs" />
+    <Compile Include="IO\DiskOutputCacheResponseFilter.cs" />
+    <Compile Include="IO\DiskOutputCacheTracker.cs" />
+    <Compile Include="IO\PostedFileSizeException.cs" />
+    <Compile Include="IO\WebFile.cs" />
+    <Compile Include="IO\WebPath.cs" />
+    <Compile Include="IpBlockingModule.cs" />
+    <Compile Include="JQueryResourcePath.cs" />
+    <Compile Include="LocalizationModule.cs" />
+    <Compile Include="Localization\DbResourceConfiguration.cs" />
+    <Compile Include="Localization\DbResourceDataManager.cs" />
+    <Compile Include="Localization\DbResourceProviderSection.cs" />
+    <Compile Include="Localization\DbSimpleResourceProvider.cs" />
+    <Compile Include="Localization\DbSimpleResourceProviderFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Localization\DbSimpleResourceReader.cs" />
+    <Compile Include="Localization\IResourceProvider.cs" />
+    <Compile Include="Localization\LocalizationException.cs" />
+    <Compile Include="Localization\SqlDataAccess.cs" />
+    <Compile Include="Localization\SqlDataAccessBase.cs" />
+    <Compile Include="NoCacheModule.cs" />
+    <Compile Include="ObjectExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\WebAssemblyInfo.cs" />
+    <Compile Include="RefreshTrapperModule.cs" />
+    <Compile Include="Localization\ClientLocalization.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="SR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.strings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SafeMailLinkModule.cs" />
+    <Compile Include="SafeMailLinkStream.cs" />
+    <Compile Include="JavaScriptSerializerExtensions.cs" />
+    <Compile Include="SecureSessionModule.cs" />
+    <Compile Include="Security\CaptchaImage.cs" />
+    <Compile Include="ServiceModel\ApiFault.cs" />
+    <Compile Include="ServiceModel\EncodedParametersAttribute.cs" />
+    <Compile Include="ServiceModel\HandleServiceErrorsAttribute.cs" />
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="SupportEmail.cs" />
+    <Compile Include="Syndication\GenericRssChannel.cs" />
+    <Compile Include="Syndication\GenericRssElement.cs" />
+    <Compile Include="Syndication\GenericRssHttpHandlerBase.cs" />
+    <Compile Include="Syndication\RssBuildProvider.cs" />
+    <Compile Include="Syndication\RssChannelBase.cs" />
+    <Compile Include="Syndication\RssChannelDom.cs" />
+    <Compile Include="Syndication\RssCodeGenerator.cs" />
+    <Compile Include="Syndication\RssdlBuildProvider.cs" />
+    <Compile Include="Syndication\RssDownloadManager.cs" />
+    <Compile Include="Syndication\RssElementBase.cs" />
+    <Compile Include="Syndication\RssElementCustomTypeDescriptor.cs" />
+    <Compile Include="Syndication\RssHttpHandlerBase.cs" />
+    <Compile Include="Syndication\RssHttpHandlerHelper.cs" />
+    <Compile Include="Syndication\RssXmlHelper.cs" />
+    <Compile Include="TypeCacheSerializer.cs" />
+    <Compile Include="TypeCache.cs" />
+    <Compile Include="UI\AjaxUtility.cs" />
+    <Compile Include="UI\CachedImageService.cs" />
+    <Compile Include="UI\CheckBoxControlConverter.cs" />
+    <Compile Include="UI\ClientScriptManagerExtensions.cs" />
+    <Compile Include="UI\ControlConverter%271.cs" />
+    <Compile Include="UI\DataSourceHelper.cs" />
+    <Compile Include="UI\ErrorSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\FormAdapter.cs" />
+    <Compile Include="UI\HtmlStringFormatter.cs" />
+    <Compile Include="UI\ILocalizable.cs" />
+    <Compile Include="UI\ImageCacher.cs" />
+    <Compile Include="UI\ISpamGuardian.cs" />
+    <Compile Include="UI\JsonSerializer.cs" />
+    <Compile Include="UI\ListControlConverter.cs" />
+    <Compile Include="UI\Page2.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PageExtensions.cs" />
+    <Compile Include="UI\PageParts\ClientEvent.cs" />
+    <Compile Include="UI\PageParts\ColumnLayout.cs" />
+    <Compile Include="UI\PageParts\ContentRenderer.cs" />
+    <Compile Include="UI\PageParts\HtmlListRenderer.cs" />
+    <Compile Include="UI\PageParts\IClientScriptProvider.cs" />
+    <Compile Include="UI\PageParts\IListRenderer.cs" />
+    <Compile Include="UI\PageParts\InlineClientScript.cs" />
+    <Compile Include="UI\PageParts\IPagePart.cs" />
+    <Compile Include="UI\PageParts\PagePart.cs" />
+    <Compile Include="UI\PageParts\PagePartCollection.cs" />
+    <Compile Include="UI\PageParts\PagePartContainer.cs" />
+    <Compile Include="UI\PageParts\PagePartStyle.cs" />
+    <Compile Include="UI\WebControls\AccordionMenu.cs" />
+    <Compile Include="UI\WebControls\AdditionalParametersCollection.cs" />
+    <Compile Include="UI\WebControls\BaseCompareValidatorEx.cs" />
+    <Compile Include="UI\WebControls\Body.cs" />
+    <Compile Include="UI\WebControls\BulletedListEx.cs" />
+    <Compile Include="UI\WebControls\ButtonEx.cs" />
+    <Compile Include="UI\WebControls\CalendarEx.cs" />
+    <Compile Include="UI\WebControls\Case.cs" />
+    <Compile Include="UI\WebControls\CaseCollection.cs" />
+    <Compile Include="UI\WebControls\CheckBoxEx.cs" />
+    <Compile Include="UI\WebControls\CheckBoxValidator.cs" />
+    <Compile Include="UI\WebControls\Cloud.cs" />
+    <Compile Include="UI\WebControls\CloudItem.cs" />
+    <Compile Include="UI\WebControls\CloudItemClickEventArgs.cs" />
+    <Compile Include="UI\WebControls\CMS\CallbackEventArgs.cs" />
+    <Compile Include="UI\WebControls\CMS\CmsContainer.cs" />
+    <Compile Include="UI\WebControls\CMS\CmsEntityExplorer.cs" />
+    <Compile Include="UI\WebControls\CMS\CmsEntityView.cs" />
+    <Compile Include="UI\WebControls\CMS\EntityExplorerLayout.cs" />
+    <Compile Include="UI\WebControls\ConditionalRequiredFieldValidator.cs" />
+    <Compile Include="UI\WebControls\ControlExtender.cs" />
+    <Compile Include="UI\WebControls\ControlExtensions.cs" />
+    <Compile Include="UI\WebControls\ControlLocalizer.cs" />
+    <Compile Include="UI\WebControls\ControlRecursiveSearch.cs" />
+    <Compile Include="UI\WebControls\DesignerControl.cs" />
+    <Compile Include="UI\WebControls\DesignerControlCollection.cs" />
+    <Compile Include="UI\WebControls\DesignerOrderChangedEventArgs.cs" />
+    <Compile Include="UI\WebControls\DesignerSurface.cs" />
+    <Compile Include="UI\WebControls\DropDownlistEx.cs" />
+    <Compile Include="UI\WebControls\DynamicImage.cs" />
+    <Compile Include="UI\WebControls\EditorType.cs" />
+    <Compile Include="UI\WebControls\EmbeddedMediaType.cs" />
+    <Compile Include="UI\WebControls\EmbeddedObject.cs" />
+    <Compile Include="UI\WebControls\EntityView.cs" />
+    <Compile Include="UI\WebControls\EntityViewItem.cs" />
+    <Compile Include="UI\WebControls\FlashMovie.cs" />
+    <Compile Include="UI\WebControls\HtmlHeadExtensions.cs" />
+    <Compile Include="UI\WebControls\HtmlRotator.cs" />
+    <Compile Include="UI\WebControls\HyperlinkEx.cs" />
+    <Compile Include="UI\WebControls\IFrame.cs" />
+    <Compile Include="UI\WebControls\ImageButtonEx.cs" />
+    <Compile Include="UI\WebControls\ImageEx.cs" />
+    <Compile Include="UI\WebControls\IRelationalListControl.cs" />
+    <Compile Include="UI\WebControls\JavaScript.cs" />
+    <Compile Include="UI\WebControls\LabelEx.cs" />
+    <Compile Include="UI\WebControls\LinkButtonEx.cs" />
+    <Compile Include="UI\WebControls\LiteralEx.cs" />
+    <Compile Include="UI\WebControls\RadioButtonEx.cs" />
+    <Compile Include="UI\WebControls\RelationalDropDownList.cs" />
+    <Compile Include="UI\WebControls\RelationalListBox.cs" />
+    <Compile Include="UI\WebControls\RelationalListGroup.cs" />
+    <Compile Include="UI\WebControls\RelationalListHelper.cs" />
+    <Compile Include="UI\WebControls\RepeaterEx.cs" />
+    <Compile Include="UI\WebControls\RolloverImageButton.cs" />
+    <Compile Include="UI\WebControls\RssHyperLink.cs" />
+    <Compile Include="UI\WebControls\Slider.cs" />
+    <Compile Include="UI\WebControls\SliderItem.cs" />
+    <Compile Include="UI\WebControls\SliderItemCollection.cs" />
+    <Compile Include="UI\WebControls\SwapImageProvider.cs" />
+    <Compile Include="UI\WebControls\Switch.cs" />
+    <Compile Include="UI\WebControls\TabItem.cs" />
+    <Compile Include="UI\WebControls\TabItemCollection.cs" />
+    <Compile Include="UI\WebControls\TextBoxEx.cs" />
+    <Compile Include="UI\WebControls\TreeNode.cs" />
+    <Compile Include="UI\WebControls\TreeView.cs" />
+    <Compile Include="UI\WebControls\WaitButton.cs" />
+    <Compile Include="UI\WebControls\WaitScreen.cs" />
+    <Compile Include="UserAuthenticationModule.cs" />
+    <Compile Include="VirtualFileFactory.cs" />
+    <Compile Include="VirtualFileModule.cs" />
+    <Compile Include="VirtualImageFile.cs" />
+    <Compile Include="VirtualImageProvider.cs" />
+    <Compile Include="VirtualImageProviderModule.cs" />
+    <Compile Include="VirtualScriptFile.cs" />
+    <Compile Include="WebAdditionalInfoProvider.cs" />
+    <Compile Include="WebResourcePath.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BaseCompareValidator2.js" />
+    <EmbeddedResource Include="Resources\CheckBoxValidatorScript.js" />
+    <EmbeddedResource Include="Resources\CmsUi.js" />
+    <EmbeddedResource Include="Resources\ConditionalRequiredFieldValidation.js" />
+    <Content Include="..\Shared\Loom.ico">
+      <Link>Loom.ico</Link>
+    </Content>
+    <Content Include="Resources\JQuery\coda-slider.full.js" />
+    <Content Include="Resources\JQuery\coda-slider.js" />
+    <Content Include="Resources\JQuery\core.js" />
+    <Content Include="Resources\JQuery\easing-compatibility.js" />
+    <Content Include="Resources\JQuery\easing.full.js" />
+    <Content Include="Resources\JQuery\easing.js" />
+    <Content Include="Resources\JQuery\treeview.js" />
+    <Content Include="Resources\JQuery\ui.js" />
+    <EmbeddedResource Include="Resources\nia.jpg" />
+    <EmbeddedResource Include="Resources\RelationalListControls.js" />
+    <EmbeddedResource Include="Resources\SafeLink.js" />
+    <EmbeddedResource Include="Resources\SingleRadioCheck.js" />
+    <EmbeddedResource Include="Resources\SwapImage.js" />
+    <EmbeddedResource Include="Resources\TextFaderScript.js" />
+    <EmbeddedResource Include="Resources\wz_dragdrop.js" />
+    <EmbeddedResource Include="SR.resx">
+      <DependentUpon>SR.strings</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Resource.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\DocumentRedirectConfiguration.scdl">
+      <Generator>ScdlConfigGen</Generator>
+      <LastGenOutput>DocumentRedirectConfiguration.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\DocumentRedirectConfiguration.xsd">
+      <DependentUpon>DocumentRedirectConfiguration.scdl</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configuration\ErrorHandlingConfiguration.scdl">
+      <Generator>ScdlConfigGen</Generator>
+      <LastGenOutput>ErrorHandlingConfiguration.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\ErrorHandlingConfiguration.xsd">
+      <DependentUpon>ErrorHandlingConfiguration.scdl</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configuration\PageViewScriptBlockerConfiguration.scdl">
+      <Generator>ScdlConfigGen</Generator>
+      <LastGenOutput>PageViewScriptBlockerConfiguration.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\PageViewScriptBlockerConfiguration.xsd">
+      <DependentUpon>PageViewScriptBlockerConfiguration.scdl</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configuration\SupportEmailConfiguration.scdl">
+      <Generator>ScdlConfigGen</Generator>
+      <LastGenOutput>SupportEmailConfiguration.cs</LastGenOutput>
+    </None>
+    <None Include="Configuration\SupportEmailConfiguration.xsd">
+      <DependentUpon>SupportEmailConfiguration.scdl</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SR.strings">
+      <Generator>SRCodeGen</Generator>
+      <LastGenOutput>SR.cs</LastGenOutput>
+      <CustomToolNamespace>Loom.Web</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loom.Design\Loom.Design.csproj">
+      <Project>{bde6f789-021e-45f4-9dfa-5b819597f0be}</Project>
+      <Name>Loom.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Drawing\Loom.Drawing.csproj">
+      <Project>{F960D46E-260B-4D45-B4A9-CE41018E19B5}</Project>
+      <Name>Loom.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom\Loom.csproj">
+      <Project>{49A9240F-C57E-4BE4-AF04-92229AC5EB1E}</Project>
+      <Name>Loom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

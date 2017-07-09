@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7D312DC-D8E5-494B-BAD8-5FC8D854256B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loom.Windows.Forms</RootNamespace>
+    <AssemblyName>Loom.Windows.Forms</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedProductInfo.cs">
+      <Link>Properties\SharedProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedVersionInfo.cs">
+      <Link>Properties\SharedVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AnimationStyle.cs" />
+    <Compile Include="BalloonTipIcon.cs" />
+    <Compile Include="BitmapCursor.cs" />
+    <Compile Include="ColorRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ColorRichTextBox.designer.cs">
+      <DependentUpon>ColorRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorTable.cs" />
+    <Compile Include="ColumnHeaderRenderer.cs" />
+    <Compile Include="DashStyleEditor.cs" />
+    <Compile Include="DefaultColorTable.cs" />
+    <Compile Include="Designer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DesignerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DesignerControlError.cs" />
+    <Compile Include="DesignerControlWrapper.cs" />
+    <Compile Include="DesignerEventArgs.cs" />
+    <Compile Include="DesktopCursor.cs" />
+    <Compile Include="DrawGroupHeaderArgs.cs" />
+    <Compile Include="DrawItemArgs.cs" />
+    <Compile Include="DropDownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ErrorListItem.cs" />
+    <Compile Include="ErrorSeverity.cs" />
+    <Compile Include="ExpandingListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExpandingListView.designer.cs">
+      <DependentUpon>ExpandingListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpandingListViewGroup.cs" />
+    <Compile Include="ExpandingListViewGroupCollection.cs" />
+    <Compile Include="ExpandingListViewItem.cs" />
+    <Compile Include="ExpandingListViewItemBase.cs" />
+    <Compile Include="ExpandingListViewItemCollection.cs" />
+    <Compile Include="ExpandingListViewItemComparer.cs" />
+    <Compile Include="ExpandingListViewItemSummary.cs" />
+    <Compile Include="ExpandingListViewRenderer.cs" />
+    <Compile Include="ExpandingListViewSubItemCollectionEditor.cs" />
+    <Compile Include="GenericEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="HatchStyleEditor.cs" />
+    <Compile Include="HotKeyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotKeyForm.designer.cs">
+      <DependentUpon>HotKeyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDesignableSurface.cs" />
+    <Compile Include="LayeredWindow.cs" />
+    <Compile Include="LayerPaintEventArgs.cs" />
+    <Compile Include="MovableContainerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="PreviewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SR.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SR.strings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ScrollableTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollBarOrientation.cs" />
+    <Compile Include="ShortcutTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StandardValuesListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StandardValuesUIEditor.cs" />
+    <Compile Include="TextBoxBalloonTip.cs" />
+    <Compile Include="Tracker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tracker.designer.cs">
+      <DependentUpon>Tracker.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DropDownForm.resx">
+      <DependentUpon>DropDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpandingListView.resx">
+      <DependentUpon>ExpandingListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericEditor.resx">
+      <DependentUpon>GenericEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SR.resx">
+      <DependentUpon>SR.strings</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracker.resx">
+      <DependentUpon>Tracker.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SR.strings">
+      <Generator>SRCodeGen</Generator>
+      <LastGenOutput>SR.cs</LastGenOutput>
+      <CustomToolNamespace>Loom.Windows.Forms</CustomToolNamespace>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loom.Drawing\Loom.Drawing.csproj">
+      <Project>{F960D46E-260B-4D45-B4A9-CE41018E19B5}</Project>
+      <Name>Loom.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom\Loom.csproj">
+      <Project>{49A9240F-C57E-4BE4-AF04-92229AC5EB1E}</Project>
+      <Name>Loom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

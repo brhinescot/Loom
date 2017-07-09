@@ -1,0 +1,4 @@
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom.Windows.Forms.Resources
+
+[strings]

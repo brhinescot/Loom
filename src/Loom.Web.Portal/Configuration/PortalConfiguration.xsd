@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="portalSettings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="imageCache">
+          <xs:complexType>
+            <xs:attribute name="quality" use="optional" type="xs:int" default="90" />
+            <xs:attribute name="cacheTime" use="optional" type="xs:int" default="60" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jQuery">
+          <xs:complexType>
+            <xs:attribute name="version" use="optional" type="xs:string" default="1.6.2" />
+            <xs:attribute name="debug" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="cdn" use="optional" type="xs:string" default="Google" />
+            <xs:attribute name="disableFallback" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="modernizer">
+          <xs:complexType>
+            <xs:attribute name="version" use="optional" type="xs:string" default="2.0.6" />
+            <xs:attribute name="debug" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="assets">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="value" use="optional" type="xs:string" default="/content/images" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="base" use="optional" type="xs:string" default="/" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="thumbnails">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="suffix" use="optional" type="xs:string" default="i" />
+                  <xs:attribute name="maxSize" use="optional" type="xs:int" default="32" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="quality" use="optional" type="xs:int" default="90" />
+            <xs:attribute name="cacheTime" use="optional" type="xs:int" default="60" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="routes">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="expression" use="optional" type="xs:string" />
+                  <xs:attribute name="controller" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="allowDatabaseRoutes" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="allowPhysicalPages" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="languages">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="value" use="optional" type="xs:string" default="en-US" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="default" use="optional" type="xs:string" default="English" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="virtualResources">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="namespace" use="optional" type="xs:string" />
+                  <xs:attribute name="assembly" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tenants">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="domain" use="required" type="xs:string" />
+                  <xs:attribute name="tenant" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="domain" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:attribute name="setup" use="optional" default="false">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="enabledTenants" use="optional" default="false">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="false" />
+            <xs:enumeration value="true" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

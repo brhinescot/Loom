@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema id="ActiveDataCodeGenerator" targetNamespace="urn:schemas-colossusinteractive-com:activedata-codegen" xmlns="urn:schemas-colossusinteractive-com:activedata-codegen" xmlns:mstns="urn:schemas-colossusinteractive-com:activedata-codegen" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="activeMapCodeGenConfiguration">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="provider">
+          <xs:complexType>
+            <xs:attribute name="name" use="optional" type="xs:string" />
+            <xs:attribute name="type" use="optional" type="xs:string" />
+            <xs:attribute name="connectionString" use="optional" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="codeGen">
+          <xs:complexType>
+            <xs:attribute name="useNullableTypes" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="baseNamespace" use="optional" type="xs:string" />
+            <xs:attribute name="templateDirectory" use="optional" type="xs:string" />
+            <xs:attribute name="generateTables" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generateViews" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generateProcedures" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generateCollectMethods" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="serializationNamespace" use="optional" type="xs:string" default="http://www.colossusinteractive.com/ns/frameworks/loom/data/mapping" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="auditMapping">
+          <xs:complexType>
+            <xs:attribute name="createdOnColumn" use="optional" type="xs:string" default="CreatedOn" />
+            <xs:attribute name="createdbyColumn" use="optional" type="xs:string" default="CreatedBy" />
+            <xs:attribute name="modifiedOnColumn" use="optional" type="xs:string" default="ModifiedOn" />
+            <xs:attribute name="modifiedByColumn" use="optional" type="xs:string" default="ModifiedBy" />
+            <xs:attribute name="deletedOnColumn" use="optional" type="xs:string" default="DeletedOn" />
+            <xs:attribute name="deletedByColumn" use="optional" type="xs:string" default="DeletedBy" />
+            <xs:attribute name="deletedColumn" use="optional" type="xs:string" default="Deleted" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="charAsBooleanColumns">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="table" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" />
+                  <xs:attribute name="column" use="optional" type="xs:string" />
+                  <xs:attribute name="valueTrue" use="optional" type="xs:string" default="Y" />
+                  <xs:attribute name="valueFalse" use="optional" type="xs:string" default="N" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="table" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="views">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="exclude" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="identityAsKey" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="charAsBooleanColumns" use="optional" type="xs:string" />
+                  <xs:attribute name="generateConstriants" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="renameTo" use="optional" type="xs:string" />
+                  <xs:attribute name="addSuffix" use="optional" type="xs:string" />
+                  <xs:attribute name="addPrefix" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="explicitInclude" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="regex" use="optional" type="xs:string" />
+            <xs:attribute name="generateConstraints" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generatePartialClasses" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="enableAutoVersioning" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="procedures">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="exclude" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="charAsBooleanColumns" use="optional" type="xs:string" />
+                  <xs:attribute name="generateConstriants" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="renameTo" use="optional" type="xs:string" />
+                  <xs:attribute name="addSuffix" use="optional" type="xs:string" />
+                  <xs:attribute name="addPrefix" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="explicitInclude" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="regex" use="optional" type="xs:string" />
+            <xs:attribute name="generateConstraints" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generatePartialClasses" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="enableAutoVersioning" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tables">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="exclude" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="identityAsKey" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="charAsBooleanColumns" use="optional" type="xs:string" />
+                  <xs:attribute name="generateConstriants" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="generatePrimaryKeyObjects" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="generateForeignKeyCollections" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="renameTo" use="optional" type="xs:string" />
+                  <xs:attribute name="addSuffix" use="optional" type="xs:string" />
+                  <xs:attribute name="addPrefix" use="optional" type="xs:string" />
+                  <xs:attribute name="insertProcedure" use="optional" type="xs:string" />
+                  <xs:attribute name="updateProcedure" use="optional" type="xs:string" />
+                  <xs:attribute name="deleteProdecure" use="optional" type="xs:string" />
+                  <xs:attribute name="localizableColumns" use="optional" type="xs:string" />
+                  <xs:attribute name="localizationTableSchema" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="localizationTableName" use="optional" type="xs:string" />
+                  <xs:attribute name="baseTableSchema" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="baseTableName" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="explicitInclude" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="regex" use="optional" type="xs:string" />
+            <xs:attribute name="generateConstraints" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generatePrimaryKeyObjects" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generateForeignKeyCollections" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="generatePartialClasses" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="enableAutoVersioning" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="compositeTables">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="table" use="optional" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="columns" use="optional" type="xs:string" default="*" />
+                  <xs:attribute name="identityAsKey" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="charAsBooleanColumns" use="optional" type="xs:string" />
+                  <xs:attribute name="generateConstriants" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="generatePrimaryKeyObjects" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="generatePartialClasses" use="optional" default="true">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="generateForeignKeyCollections" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enumTables">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="keyOrdinal" use="optional" type="xs:int" default="0" />
+                  <xs:attribute name="valueOrdinal" use="optional" type="xs:int" default="1" />
+                  <xs:attribute name="exclude" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="renameTo" use="optional" type="xs:string" />
+                  <xs:attribute name="addSuffix" use="optional" type="xs:string" />
+                  <xs:attribute name="addPrefix" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="explicitInclude" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="keyOrdinal" use="optional" type="xs:int" default="0" />
+            <xs:attribute name="valueOrdinal" use="optional" type="xs:int" default="1" />
+            <xs:attribute name="activeColumn" use="optional" type="xs:string" default="Active" />
+            <xs:attribute name="generateDataRecord" use="optional" default="false">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lookupTables">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="owner" use="optional" type="xs:string" default="dbo" />
+                  <xs:attribute name="keyOrdinal" use="optional" type="xs:int" default="0" />
+                  <xs:attribute name="valueOrdinal" use="optional" type="xs:int" default="1" />
+                  <xs:attribute name="exclude" use="optional" default="false">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:NMTOKEN">
+                        <xs:enumeration value="false" />
+                        <xs:enumeration value="true" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="renameTo" use="optional" type="xs:string" />
+                  <xs:attribute name="addSuffix" use="optional" type="xs:string" />
+                  <xs:attribute name="addPrefix" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+            <xs:attribute name="explicitInclude" use="optional" default="true">
+              <xs:simpleType>
+                <xs:restriction base="xs:NMTOKEN">
+                  <xs:enumeration value="false" />
+                  <xs:enumeration value="true" />
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="schemaIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixIncludes" use="optional" type="xs:string" />
+            <xs:attribute name="schemaExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="prefixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="suffixExcludes" use="optional" type="xs:string" />
+            <xs:attribute name="keyOrdinal" use="optional" type="xs:int" default="0" />
+            <xs:attribute name="valueOrdinal" use="optional" type="xs:int" default="1" />
+            <xs:attribute name="activeColumn" use="optional" type="xs:string" default="Active" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

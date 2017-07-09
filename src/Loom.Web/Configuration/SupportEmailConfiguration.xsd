@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="supportEmailSettings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sender">
+          <xs:complexType>
+            <xs:attribute name="name" use="optional" type="xs:string" />
+            <xs:attribute name="address" use="optional" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="message">
+          <xs:complexType>
+            <xs:attribute name="subject" use="optional" type="xs:string" />
+            <xs:attribute name="header" use="optional" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="recipients">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                  <xs:attribute name="address" use="optional" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="name" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:attribute name="applicationName" use="optional" type="xs:string" />
+      <xs:attribute name="server" use="optional" type="xs:string" />
+      <xs:attribute name="port" use="optional" type="xs:int" default="0" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

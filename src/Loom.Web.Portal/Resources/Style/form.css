@@ -1,0 +1,97 @@
+/* ================================================= */
+/* This file created by Aivah                        */
+/* Dated: 3rd Feb 2009	                             */
+/* Copyright : 2009 Aivah.com                        */
+/* Stylesheet: form.css                              */
+/* ================================================= */
+
+
+form {
+    font: 12px Geneva, Tahoma, arial, sans-serif;
+    margin: 0 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+fieldset {
+    background: #fff;
+    border: 5px solid #ececec;
+    margin: 0 0 15px 0;
+    padding: 10px 0;
+}
+
+* html fieldset {
+    margin: 10px 0 30px 0;
+    padding: 20px 0;
+    position: relative;
+}
+
+* html legend {
+    left: 0;
+    position: absolute;
+    top: -1.2em;
+}
+
+fieldset legend {
+    /*text-transform : uppercase;*/
+    background: #fff;
+    font: normal 1.5em Helvetica, Tahoma, sans-serif;
+    padding: 10px 15px;
+}
+
+form label {
+    display: block;
+    float: left;
+    margin: 6px 0 0;
+    padding: 0 10px 0 0;
+    text-align: right;
+    width: 120px;
+}
+
+form dfn { margin: 0 10px; }
+
+form input, form textarea {
+    margin: 5px 0 0 0;
+    width: auto;
+}
+
+form input#reset { margin-left: 0; }
+
+textarea { overflow: auto; }
+
+form small {
+    display: block;
+    font-size: 88%;
+    margin: 0 0 5px 160px;
+    padding: 1px 3px;
+}
+
+form .required { font-weight: bold; }
+
+form br { clear: left; }
+
+.tiny { width: 40px; }
+
+.small { width: 100px; }
+
+.medium { width: 200px; }
+
+.large { width: 360px; }
+
+input[type=button] {
+    background: none repeat scroll 0 0 #39B54A;
+    border: medium none;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+input[type=button]:hover {
+    background: none repeat scroll 0 0 #007236;
+    border: medium none;
+    color: #FFFFFF;
+    padding: 3px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}

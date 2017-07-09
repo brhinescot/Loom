@@ -1,0 +1,160 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="culture_info">
+    <value>System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo</value>
+  </resheader>
+  <resheader name="resource_namespace">
+    <value>Loom.Web.Resources</value>
+  </resheader>
+  <data name="ExceptionPostedFileSizeToLarge" xml:space="preserve">
+    <value>Error uploading {0}. The file size is to large.</value>
+    <comment>string filename</comment>
+  </data>
+  <data name="ExceptionPostedFileSizeZeroLength" xml:space="preserve">
+    <value>Error uploading {0}. The file size is zero length.</value>
+    <comment>string filename</comment>
+  </data>
+  <data name="ExceptionEmptyPathNoDirectory" xml:space="preserve">
+    <value>Empty path has no directory.</value>
+  </data>
+  <data name="ExceptionPathMustBeRooted" xml:space="preserve">
+    <value>Path must be rooted.</value>
+  </data>
+  <data name="MessageFileNotFound" xml:space="preserve">
+    <value>The requested file was not found on the server.  The file may be temporarily unavailable.  Support personnel have been notified of this error.  Please check back at a later time.</value>
+  </data>
+  <data name="MessageMaliciousInput" xml:space="preserve">
+    <value>Potentially malicious input detected. Please enter only alphanumeric characters.</value>
+  </data>
+  <data name="MessageGeneralError" xml:space="preserve">
+    <value>An error has occurred in the application.</value>
+  </data>
+  <data name="MessageResourceAccessDenied" xml:space="preserve">
+    <value>Access to the requested resource is denied.</value>
+  </data>
+  <data name="ScriptSafeMailLink" xml:space="preserve">
+    <value>&lt;script language='javascript'&gt;
+function safeMessageSend(encodedTo){{
+var messageTo = '';
+for (i=0; i &lt; encodedTo.length;){{
+var letter = '';
+letter = encodedTo.charAt(i) + encodedTo.charAt(i+1)
+messageTo += String.fromCharCode(parseInt(letter,16));
+i += 2;
+}}
+location.href = messageTo.substring({0}, messageTo.length);
+}}
+&lt;/script&gt;
+</value>
+    <comment>int keyLength</comment>
+  </data>
+  <data name="ScriptRelationalList" xml:space="preserve">
+    <value>&lt;script language='javascript'&gt;
+&lt;!--
+function listItemSelected(list1,list2,keepFirst){
+if (list1 &amp;&amp; list2 != null){
+if ( list2.selectedIndex &gt;= 0 ){
+list2.originalSelectedValue = list2.options[list2.selectedIndex].value;}
+else{
+list2.originalSelectedValue = "";}
+clearComboOrList(list2);
+var listValue;
+if ( list1.selectedIndex &gt;= 0 ){
+listValue = list1.id + '=' + list1.options[list1.selectedIndex].value;}
+else{
+if(keepFirst){
+listValue = list1.id + '=' + list1.options[0].value;}
+else{
+listValue = '';}}
+fillComboBox(list2, listValue);
+if (list2.onchange)
+list2.onchange();}}
+function clearComboOrList(list){
+if (list){
+list.selectedIndex = -1;
+for (var i = list.options.length - 1; i &gt;= 0; i--){
+list.options[i] = null;}
+list.selectedIndex = -1;}}
+function fillComboBox(list, listValue){
+if (list){
+if (listValue != ''){
+if (this[list.id + 'AssocArray'][listValue]){
+var arrX = this[list.id + 'AssocArray'][listValue];
+for (var i = 0; i &lt; arrX.length; i = i + 2){
+list.options[list.options.length] = new Option(arrX[i + 1], arrX[i]);
+if (list.options[list.options.length-1].value == list.originalSelectedValue){
+list.options[list.options.length-1].selected = true;}}}
+else{
+list.options[0] = new Option('None found', '');}}}}
+function addCommandTo(functionName, newCommand){
+var scriptString;
+if (functionName){
+scriptString = new String(functionName);
+if (scriptString.indexOf('{') &gt; 0){
+scriptString = scriptString.substring(scriptString.indexOf('{') + 1, scriptString.lastIndexOf('}') - 1);
+scriptString += newCommand;}}
+else{
+scriptString = new String(newCommand);}
+return new Function(scriptString);}
+//--&gt;
+&lt;/script&gt;
+</value>
+  </data>
+</root>

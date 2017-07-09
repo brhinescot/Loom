@@ -1,0 +1,6 @@
+
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture
+#! resource_namespace = Loom.Web.Resources
+
+[strings]
+ExceptionLogFieldMissing(string name) = The LogField {0} is required but does not exist in this record.

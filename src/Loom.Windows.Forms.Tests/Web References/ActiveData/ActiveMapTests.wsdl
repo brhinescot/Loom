@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.devinterop.com/framework/data/active/tests" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://www.devinterop.com/framework/data/active" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.devinterop.com/framework/data/active/tests" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.devinterop.com/framework/data/active/tests">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://www.devinterop.com/framework/data/active" />
+      <s:element name="GetSalesReasonValues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSalesReasonValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSalesReasonValuesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetShipMethodValues">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetShipMethodValuesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShipMethodValuesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSalesReason">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSalesReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSalesReasonResult" type="tns:ArrayOfLookupListEntryOfInt32String" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLookupListEntryOfInt32String">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LookupListEntryOfInt32String" nillable="true" type="tns:LookupListEntryOfInt32String" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LookupListEntryOfInt32String">
+        <s:attribute name="Key" type="s:int" use="required" />
+        <s:attribute name="Value" type="s:string" />
+      </s:complexType>
+      <s:element name="GetShipMethod">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetShipMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetShipMethodResult" type="tns:ArrayOfLookupListEntryOfInt32String" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSalesOrderHeaderSalesReason">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSalesOrderHeaderSalesReasonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSalesOrderHeaderSalesReasonResult" type="tns:ArrayOfLookupListEntryOfInt32Int32" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLookupListEntryOfInt32Int32">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LookupListEntryOfInt32Int32" nillable="true" type="tns:LookupListEntryOfInt32Int32" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LookupListEntryOfInt32Int32">
+        <s:attribute name="Key" type="s:int" use="required" />
+        <s:attribute name="Value" type="s:int" use="required" />
+      </s:complexType>
+      <s:element name="GetCompositeObject">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCompositeObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCompositeObjectResult" type="tns:TestClass" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TestClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Reason" type="tns:ArrayOfLookupListEntryOfInt32String" />
+          <s:element minOccurs="0" maxOccurs="1" name="Method" type="tns:ArrayOfLookupListEntryOfInt32String" />
+        </s:sequence>
+        <s:attribute name="Name" type="s:string" />
+      </s:complexType>
+      <s:element name="GetProduct">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductResult" type="s2:Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateProduct">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateProductResult" type="s2:Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <s:simpleType name="Guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.devinterop.com/framework/data/active" id="Production_Product">
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element name="ProductID" type="s:int" />
+          <s:element name="Name" type="s:string" />
+          <s:element name="ProductNumber" type="s:string" />
+          <s:element name="MakeFlag" type="s:boolean" />
+          <s:element name="FinishedGoodsFlag" type="s:boolean" />
+          <s:element name="Color" nillable="true" type="s:string" />
+          <s:element name="SafetyStockLevel" type="s:short" />
+          <s:element name="ReorderPoint" type="s:short" />
+          <s:element name="StandardCost" type="s:decimal" />
+          <s:element name="ListPrice" type="s:decimal" />
+          <s:element name="Size" nillable="true" type="s:string" />
+          <s:element name="SizeUnitMeasureCode" nillable="true" type="s:string" />
+          <s:element name="WeightUnitMeasureCode" nillable="true" type="s:string" />
+          <s:element name="Weight" nillable="true" type="s:decimal" />
+          <s:element name="DaysToManufacture" type="s:int" />
+          <s:element name="ProductLine" nillable="true" type="s:string" />
+          <s:element name="Class" nillable="true" type="s:string" />
+          <s:element name="Style" nillable="true" type="s:string" />
+          <s:element name="ProductSubcategoryID" nillable="true" type="s:int" />
+          <s:element name="ProductModelID" nillable="true" type="s:int" />
+          <s:element name="SellStartDate" type="s:dateTime" />
+          <s:element name="SellEndDate" nillable="true" type="s:dateTime" />
+          <s:element name="DiscontinuedDate" nillable="true" type="s:dateTime" />
+          <s:element name="rowguid" type="s1:Guid" />
+          <s:element name="ModifiedDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSalesReasonValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSalesReasonValues" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesReasonValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSalesReasonValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShipMethodValuesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShipMethodValues" />
+  </wsdl:message>
+  <wsdl:message name="GetShipMethodValuesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShipMethodValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSalesReason" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSalesReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetShipMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetShipMethod" />
+  </wsdl:message>
+  <wsdl:message name="GetShipMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetShipMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesOrderHeaderSalesReasonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderHeaderSalesReason" />
+  </wsdl:message>
+  <wsdl:message name="GetSalesOrderHeaderSalesReasonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSalesOrderHeaderSalesReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCompositeObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCompositeObject" />
+  </wsdl:message>
+  <wsdl:message name="GetCompositeObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCompositeObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="GetProductSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateProductSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateProduct" />
+  </wsdl:message>
+  <wsdl:message name="CreateProductSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateProductResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ActiveMapTestsSoap">
+    <wsdl:operation name="GetSalesReasonValues">
+      <wsdl:input message="tns:GetSalesReasonValuesSoapIn" />
+      <wsdl:output message="tns:GetSalesReasonValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethodValues">
+      <wsdl:input message="tns:GetShipMethodValuesSoapIn" />
+      <wsdl:output message="tns:GetShipMethodValuesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesReason">
+      <wsdl:input message="tns:GetSalesReasonSoapIn" />
+      <wsdl:output message="tns:GetSalesReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethod">
+      <wsdl:input message="tns:GetShipMethodSoapIn" />
+      <wsdl:output message="tns:GetShipMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderHeaderSalesReason">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;font color='red'&gt;&lt;b&gt;This method will fail due to duplicate keys added to the dictionary&lt;/b&gt;&lt;/font&gt;. &lt;BR&gt;The &lt;b&gt;Sales.SalesOrderHeaderSalesReason&lt;/b&gt; table has a composite primary key. Look into adding support for composite keys for both the lookups and the record classes.</wsdl:documentation>
+      <wsdl:input message="tns:GetSalesOrderHeaderSalesReasonSoapIn" />
+      <wsdl:output message="tns:GetSalesOrderHeaderSalesReasonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompositeObject">
+      <wsdl:input message="tns:GetCompositeObjectSoapIn" />
+      <wsdl:output message="tns:GetCompositeObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input message="tns:GetProductSoapIn" />
+      <wsdl:output message="tns:GetProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <wsdl:input message="tns:CreateProductSoapIn" />
+      <wsdl:output message="tns:CreateProductSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ActiveMapTestsSoap" type="tns:ActiveMapTestsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSalesReasonValues">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesReasonValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethodValues">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetShipMethodValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesReason">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethod">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetShipMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderHeaderSalesReason">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesOrderHeaderSalesReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompositeObject">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetCompositeObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <soap:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ActiveMapTestsSoap12" type="tns:ActiveMapTestsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSalesReasonValues">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesReasonValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethodValues">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetShipMethodValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesReason">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShipMethod">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetShipMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesOrderHeaderSalesReason">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetSalesOrderHeaderSalesReason" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompositeObject">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetCompositeObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/GetProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <soap12:operation soapAction="http://www.devinterop.com/framework/data/active/tests/CreateProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ActiveMapTests">
+    <wsdl:port name="ActiveMapTestsSoap" binding="tns:ActiveMapTestsSoap">
+      <soap:address location="http://localhost:8080/ActiveMapTests.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ActiveMapTestsSoap12" binding="tns:ActiveMapTestsSoap12">
+      <soap12:address location="http://localhost:8080/ActiveMapTests.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

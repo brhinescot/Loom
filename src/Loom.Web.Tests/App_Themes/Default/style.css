@@ -1,0 +1,120 @@
+/* first comes html and body */
+html, body {
+    font-size: 12px;
+    height: 100%;
+}
+
+body {
+    background: #999999;
+    font-family: 'Gill Sans', 'Lucida Grande', 'Luxi Sans', Tahoma, lucida, sans-serif;
+    font-size: 75%;
+    margin: 0px;
+    padding: 0px;
+    _font-size: 100%; /* using underscore hack for MSIE here */
+}
+
+/* all the divs */
+
+div { margin: 0px; }
+
+div#header {
+    background: #6078BF;
+    border: solid 1px #6078BF;
+    clear: both;
+    min-width: 300px;
+}
+
+div#maincol {
+    display: table; /* <- using display: table hack here for Gecko browsers */
+    float: left;
+    min-height: 100%;
+    width: 100%;
+    _height: 100%; /* <- using underscore hack for MSIE here */
+}
+
+div#wrapper {
+    display: table-row;
+    vertical-align: top;
+}
+
+/* <- this is needed by Opera */
+
+div#main {
+    background: white;
+    border: solid 1px white;
+    margin-left: 200px;
+    margin-right: 0px;
+    min-height: 100%;
+    padding: 10px;
+    _height: 100%; /* <- using underscore hack for MSIE here */
+}
+
+div#col2 {
+    background-color: #ff9900;
+    float: left;
+    margin-left: -100%;
+    width: 200px;
+}
+
+div#col3 {
+    background-color: #ff6600;
+    display: none;
+    float: left;
+    margin-left: -200px;
+    width: 200px;
+}
+
+div.colwrapper {
+    margin: 0px;
+    padding: 1em;
+}
+
+/*div.content {padding: 1em;}*/
+
+div.content h1 { padding: .5em; }
+
+div.content div, pre { overflow: auto; }
+
+div#footer {
+    border: solid 1px #FFB280;
+    clear: both;
+    display: none;
+}
+
+div.footerbgtrap { background: #FFB280; }
+
+/* headings */
+
+h1 {
+    font-size: 200%;
+    margin-top: 0;
+    text-align: left;
+}
+
+h2 { font-size: 150%; }
+
+/* other common content elements can follow here */
+
+del { background-color: #FFF0E6; }
+
+ins {
+    background-color: #FFF3BF;
+    text-decoration: none;
+}
+
+div.nav td {
+    background-color: Silver;
+    text-align: center;
+    width: 150px;
+}
+
+div.nav table { width: 100%; }
+
+div.ModuleContainerHeader {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px;
+    text-align: center;
+}
+
+div.ModuleContainer { border: solid 1px black; }

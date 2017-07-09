@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4AC81C7-D468-46AA-AC75-BACD883630BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loom.Web.Portal.WebTest</RootNamespace>
+    <AssemblyName>Loom.Web.Portal.WebTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Framework.Web.Portal.WebTest.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x86\Debug\Framework.Web.Portal.WebTest.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>
+            ;I:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets
+        </CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;I:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DesktopBuildPackageLocation>..\..\package\Framework.Web.Portal.WebTests.zip</DesktopBuildPackageLocation>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Framework.Web.Portal.WebTest.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x86\Release\Framework.Web.Portal.WebTest.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>
+            ;I:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets
+        </CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;I:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\..\lib\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedProductInfo.cs">
+      <Link>Properties\SharedProductInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\SharedVersionInfo.cs">
+      <Link>Properties\SharedVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Admin\AdminSection.cs" />
+    <Compile Include="Admin\Controllers\AccountController.cs" />
+    <Compile Include="Admin\Controllers\HomeController.cs" />
+    <Compile Include="Api\ProductsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EditController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ModalController.cs" />
+    <Compile Include="Controllers\RouteTestController.cs" />
+    <Compile Include="Controllers\BindingController.cs" />
+    <Compile Include="HomeSection.cs" />
+    <Compile Include="MemCacheD.aspx.cs">
+      <DependentUpon>MemCacheD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemCacheD.aspx.designer.cs">
+      <DependentUpon>MemCacheD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PortalControls.aspx.cs">
+      <DependentUpon>PortalControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalControls.aspx.designer.cs">
+      <DependentUpon>PortalControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tenants\Tenant1\Controllers\HomeController.cs" />
+    <Compile Include="Tenants\Tenant1\HomeSection.cs" />
+    <Compile Include="Tenants\Tenant1\Products\ProductsSection.cs" />
+    <Compile Include="Tenants\Tenant1\Products\Controllers\HomeController.cs" />
+    <Compile Include="Tenants\Tenant2\Controllers\HomeController.cs" />
+    <Compile Include="Tenants\Tenant2\HomeSection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\images\download.gif" />
+    <Content Include="Admin\Content\style.css" />
+    <Content Include="Admin\Views\Account\Add.aspx" />
+    <Content Include="Admin\Views\Error\404.aspx" />
+    <Content Include="Admin\Views\Account\Index.aspx" />
+    <Content Include="Admin\Views\Home\Index.aspx" />
+    <Content Include="Content\bootstrap-theme-square.css" />
+    <Content Include="Content\bootstrap\bootstrap-datepicker.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme-square.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\font-awesome-ie7.css" />
+    <Content Include="Content\font-awesome-ie7.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\font\fontawesome-webfont.svg" />
+    <Content Include="Content\images\64 bit.png" />
+    <Content Include="Content\images\address books.png" />
+    <Content Include="Content\images\advanced.png" />
+    <Content Include="Content\images\applications.png" />
+    <Content Include="Content\images\archive.png" />
+    <Content Include="Content\images\back_alt.png" />
+    <Content Include="Content\images\burn.png" />
+    <Content Include="Content\images\calculator.png" />
+    <Content Include="Content\images\cash.png" />
+    <Content Include="Content\script\bootstrap-datepicker.js" />
+    <Content Include="Content\script\bootstrap.js" />
+    <Content Include="Content\script\bootstrap.min.js" />
+    <Content Include="Content\script\bootstrap.validate.js" />
+    <Content Include="Content\script\fastclick.js" />
+    <Content Include="Content\script\jquery-duplicate.js" />
+    <Content Include="Content\script\jquery.ba-bbq.js" />
+    <Content Include="Content\script\jquery.ba-bbq.min.js" />
+    <Content Include="Content\script\jquery.mousewheel.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.da.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.de.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.el.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.es.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.et.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.he.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.id.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.is.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.it.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.th.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Content\script\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="Content\script\underscore.js" />
+    <Content Include="Content\script\underscore.min.js" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\theme.css" />
+    <Content Include="crossdomain.xml" />
+    <Content Include="favicon.ico" />
+    <Content Include="humans.txt" />
+    <Content Include="MemCacheD.aspx" />
+    <Content Include="robots.txt" />
+    <Content Include="Tenants\Tenant1\Products\Views\Home\Add.aspx" />
+    <Content Include="Tenants\Tenant1\Products\Views\Home\Index.aspx" />
+    <Content Include="Tenants\Tenant1\Views\Home\MasterTest.aspx" />
+    <Content Include="Tenants\Tenant1\Views\Home\Index.aspx" />
+    <Content Include="Tenants\Tenant1\Views\Templates\Site.ascx" />
+    <Content Include="Tenants\Tenant2\Views\Home\Index.aspx" />
+    <Content Include="Views\Account\Preferences.aspx" />
+    <Content Include="Views\Account\Inbox.aspx" />
+    <Content Include="Views\Account\Index.aspx" />
+    <Content Include="Views\Binding\Index.aspx" />
+    <Content Include="Views\Edit\Save.aspx" />
+    <Content Include="Views\Edit\Archive.aspx" />
+    <Content Include="Views\Edit\Index.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\MasterTest.aspx" />
+    <Content Include="Views\Modal\Add.aspx" />
+    <Content Include="Views\Modal\Index.aspx" />
+    <Content Include="Views\Portal\Index.aspx" />
+    <Content Include="Views\RouteTest\Index.aspx" />
+    <Content Include="Views\Templates\Site.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PortalControls.aspx" />
+    <Content Include="style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="desc.htm" />
+    <Content Include="Content\images\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\Content\Images\" />
+    <Folder Include="Admin\Tiles\" />
+    <Folder Include="Admin\Views\Templates\" />
+    <Folder Include="Tenants\Tenant1\Content\" />
+    <Folder Include="Tenants\Tenant1\Tiles\" />
+    <Folder Include="Tiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tenants\Tenant1\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loom.Data\Loom.Data.csproj">
+      <Project>{C8ECEFFB-5041-4D4A-AAFE-534D9556DEE5}</Project>
+      <Name>Loom.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.UnitTests\Loom.UnitTests.csproj">
+      <Project>{5696A27F-C21C-43E3-B25F-0AA482E09E34}</Project>
+      <Name>Loom.UnitTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web.Portal\Loom.Web.Portal.csproj">
+      <Project>{70F3A52E-AD69-4D80-A59A-86231D5F5167}</Project>
+      <Name>Loom.Web.Portal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web\Loom.Web.csproj">
+      <Project>{31AC047C-B7F3-4B3E-A163-9518399899DF}</Project>
+      <Name>Loom.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom\Loom.csproj">
+      <Project>{49A9240F-C57E-4BE4-AF04-92229AC5EB1E}</Project>
+      <Name>Loom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme-square.scss" />
+    <Content Include="Content\style.scss" />
+    <Content Include="Content\theme.scss" />
+    <Content Include="Content\_functions.scss" />
+    <Content Include="Content\_mixins.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\script\jquery.ba-bbq.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

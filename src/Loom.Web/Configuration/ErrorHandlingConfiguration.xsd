@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="errorHandlingSettings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="fileNotFound">
+          <xs:complexType>
+            <xs:attribute name="redirect" use="optional" type="xs:string" />
+            <xs:attribute name="message" use="optional" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="maliciousInput">
+          <xs:complexType>
+            <xs:attribute name="redirect" use="optional" type="xs:string" />
+            <xs:attribute name="message" use="optional" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:attribute name="defaultRedirect" use="optional" type="xs:string" />
+      <xs:attribute name="defaultMessage" use="optional" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,9 @@
+﻿<Loom.Web.Configuration>
+  <supportEmailSettings applicationName="" server="" port="0">
+    <recipients>
+      <add name="" address="" />
+    </recipients>
+    <sender name="" address="" />
+    <message subject="" header=""/>
+  </supportEmailSettings>
+</Loom.Web.Configuration>

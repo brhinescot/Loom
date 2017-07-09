@@ -1,0 +1,58 @@
+﻿<div class="col-md-9 form-container">
+    <h3>Form Validation</h3>
+    <a href="#routeEditor" class="async">Route Editor</a>
+
+    <form role="form" id="validationTest" action="api/customer/" class="validate json-post">
+        <div class="form-group ">
+            <label class="control-label" for="firstName">First Name</label>
+            <input id="firstName" name="FirstName" type="text" class="required autocomplete form-control" data-loom-options='{"autocomplete":{"source":"~/data/customer.json"}}'/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="birthDate">Birth Date</label>
+            <input id="birthDate" name="BirthDate" type="text" class="form-control" data-loom-options='{"date":{"min":"-150y", "max": "+0d", "message":"The Birth Date must be in the past and not more than 150 years ago."}}'/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" name="PhoneNumber" type="text" class="phone form-control" data-loom-options='{"conditionalRequired":{"field":"#birthDate"}}'/>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Arrival Date</label>
+            <input id="arrivalDate" name="ArrivalDate" type="text" class="required form-control" data-loom-options='{"date":{"min":"+2d", "max":"12/12/2013", "message":"The Arrival Date must be more two days out and before Dec 12th, 2013."}}' data-loom-message="A valid arrival date is required. Xxxxx  x x x xxx xx xx xx x xxx x xxx xxxx xxx xxx xxxx xxxxx xx xx xxxx xx xxx."/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="number">Number</label>
+            <input id="number" name="Number" type="text" class="form-control" data-loom-options='{"required":{"message":"This shit is required yo!"}, "number":{"min":0, "max":100, "message":"Must be a valid number between 0 and 100."}}'/>
+        </div>
+        <div class="form-group ">
+            <label class="control-label">Email</label>
+            <input name="Email" type="text" class="email form-control"/>
+        </div>
+        <div class="form-group ">
+            <label class="control-label">Select</label>
+            <select name="Select" class="form-control">
+                <option>Option</option>
+            </select>
+        </div>
+        <div class="form-group ">
+            <input class="btn btn-primary" name="Save" type="submit" value="Save"/>
+            <input class="cancel btn btn-default" data-loom-action="update" name="Cancel" type="submit" value="Cancel"/>
+        </div>
+    </form>
+
+    <script id="captionTemplate" type="text/x-ci-tmpl">
+        <li>The message is ${message}</li>
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+
+            $('#validationTest').bind('validated',
+                function() {
+                    console.log('validated');
+                });
+
+            // If a viewData property is created or updated client side, the framework is notified and the data is bound/re-bound to the appropriate element and rendered.
+            //p$.viewData.errors = [{ title: 'Test Title', message: 'Test Message' }, { title: 'Test Title', message: 'Test Message' }, { title: 'Test Title', message: 'Test Message'}];
+        });
+    </script>
+</div>

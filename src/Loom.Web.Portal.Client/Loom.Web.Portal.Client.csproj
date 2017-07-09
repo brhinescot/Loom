@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{018EE86A-BE88-4034-9D0E-4C58EDA3509B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Loom.Web.Portal.Client</RootNamespace>
+    <AssemblyName>Loom.Web.Portal.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="scripts\loom\controllers\" />
+    <Folder Include="scripts\loom\models\" />
+    <Folder Include="scripts\loom\views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\bootstrap\bootstrap-datepicker.css" />
+    <Content Include="content\bootstrap-theme-square.css">
+      <DependentUpon>bootstrap-theme-square.scss</DependentUpon>
+    </Content>
+    <Content Include="content\bootstrap\bootstrap-theme.css" />
+    <Content Include="content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="content\bootstrap\bootstrap.css" />
+    <Content Include="content\bootstrap\bootstrap.min.css" />
+    <Content Include="content\font-awesome-ie7.css" />
+    <Content Include="content\font-awesome-ie7.min.css" />
+    <Content Include="content\font-awesome.css" />
+    <Content Include="content\font-awesome.min.css" />
+    <Content Include="content\font\fontawesome-webfont.svg" />
+    <Content Include="content\font\fontawesome-webfont.woff" />
+    <Content Include="content\font\fontawesome-webfont.ttf" />
+    <Content Include="content\font\fontawesome-webfont.eot" />
+    <Content Include="content\font\FontAwesome.otf" />
+    <Content Include="content\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="content\theme.css">
+      <DependentUpon>theme.scss</DependentUpon>
+    </Content>
+    <Content Include="data\customer.json" />
+    <Content Include="data\test.json" />
+    <Content Include="content\style.scss" />
+    <Content Include="content\bootstrap-theme-square.scss" />
+    <Content Include="content\theme.scss" />
+    <Content Include="content\_mixins.scss" />
+    <Content Include="content\_functions.scss" />
+    <None Include="jquery\duplicator\jquery-2.0.3-vsdoc.js" />
+    <None Include="jquery\duplicator\jquery-2.0.3.intellisense.js" />
+    <Content Include="Global.asax" />
+    <Content Include="jquery\duplicator\jquery-2.0.3.js" />
+    <Content Include="jquery\duplicator\jquery-2.0.3.min.js" />
+    <Content Include="scripts\bootstrap-datepicker.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\bootstrap.validate.js" />
+    <Content Include="data\binding.json" />
+    <Content Include="index.htm" />
+    <Content Include="jquery\duplicator\AutoDuplicatorTest.htm" />
+    <Content Include="jquery\duplicator\jquery-duplicate.js" />
+    <Content Include="jquery\duplicator\MB_0030_delete.png" />
+    <Content Include="jquery\duplicator\style.css" />
+    <Content Include="packages.config" />
+    <Content Include="jquery\duplicator\jquery-2.0.3.min.map" />
+    <None Include="Properties\PublishProfiles\Staging.pubxml" />
+    <None Include="scripts\jquery-2.0.3.intellisense.js" />
+    <None Include="scripts\jquery-2.0.3-vsdoc.js" />
+    <Content Include="scripts\cportal-0.1.js" />
+    <Content Include="scripts\cportal-0.1.min.js">
+      <DependentUpon>cportal-0.1.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\fastclick.js" />
+    <Content Include="scripts\jquery-2.0.3.js" />
+    <Content Include="scripts\jquery-2.0.3.min.js">
+      <DependentUpon>jquery-2.0.3.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery-duplicate.js" />
+    <Content Include="scripts\jquery.ba-bbq.js" />
+    <Content Include="scripts\jquery.ba-bbq.min.js" />
+    <Content Include="scripts\jquery.mousewheel.js" />
+    <Content Include="scripts\jquery.ba-bbq.min.js.map">
+      <DependentUpon>jquery.ba-bbq.js</DependentUpon>
+    </Content>
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.da.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.de.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.el.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.es.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.et.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.he.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.id.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.is.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.it.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.th.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="scripts\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="scripts\underscore.js" />
+    <Content Include="scripts\underscore.min.js" />
+    <Content Include="views\binding\index.htm" />
+    <Content Include="views\divNav1\index.htm" />
+    <Content Include="views\divNav2\index.htm" />
+    <Content Include="views\divNav3\index.htm" />
+    <Content Include="views\modals\add.htm" />
+    <Content Include="views\routeEditor\index.htm" />
+    <Content Include="views\edit\save.htm" />
+    <Content Include="views\edit\finalize.htm" />
+    <Content Include="views\edit\index.htm" />
+    <Content Include="views\save\current.htm" />
+    <Content Include="views\serializeform\index.htm" />
+    <Content Include="views\validators\index.htm" />
+    <Content Include="scripts\jquery-2.0.3.min.map" />
+    <Content Include="Web.config" />
+    <Content Include="scripts\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js.map">
+      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PortalController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.15\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.15\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loom.Data\Loom.Data.csproj">
+      <Project>{c8eceffb-5041-4d4a-aafe-534d9556dee5}</Project>
+      <Name>Loom.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web.Portal\Loom.Web.Portal.csproj">
+      <Project>{70f3a52e-ad69-4d80-a59a-86231d5f5167}</Project>
+      <Name>Loom.Web.Portal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom.Web\Loom.Web.csproj">
+      <Project>{31ac047c-b7f3-4b3e-a163-9518399899df}</Project>
+      <Name>Loom.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loom\Loom.csproj">
+      <Project>{49a9240f-c57e-4be4-af04-92229ac5eb1e}</Project>
+      <Name>Loom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53625/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.10\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

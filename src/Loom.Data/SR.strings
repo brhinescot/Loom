@@ -1,0 +1,15 @@
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom.Data.Resources
+
+[strings]
+
+#EXCEPTIONS
+ExArgNotLessThanZero = Value can not be less than zero.
+ExPrimaryKeyValueNotSet = There is no primary key set for this object. Unable to delete using this delete method.
+ExNoPrimaryKeyDefinedInTable(string tableName) = There is no primary key defined in the table {0}. Unable to delete using this delete method.
+ExFetchByIdPrimaryKeyNotDefinedInTable(string tableName) = There is no primary key defined in the table {0}. Try using 'FetchFirst(TableColumnInfo columnName, object value)'.
+ExOpenGroupsInWhere(int count) = There are {0} open groups in the where clause that need to be closed before calling EndWhere().
+ExArgCanNotBeEmptyString = The value of '{0}' can not be an empty string.
+ExDiffBaseLineAndWorkingTypeMismatch = The type of 'baseline' and 'working' must match.
+ExSelectArgumentTableDoesNotMatchRecord = The Select argument's Table does not match this records table.
+ExArgCanNotBeCollection = Collections can not be used with this method. Use one of the Is*Any(ICollection) methods.

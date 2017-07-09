@@ -1,0 +1,93 @@
+/*
+	Featured Content Slider
+	by: Chris Coyier
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+					  				  
+/*
+	UTILITY STYLES
+*/
+
+a { outline: none; }
+
+/*
+	TYPOGRAPHY
+*/
+
+ul { list-style: square inside; }
+
+a, a:visited {
+    color: #729dff;
+    text-decoration: none;
+}
+
+a:hover, a:active { color: white; }
+
+blockquote {
+    border-left: 20px solid #ccc;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+/*
+	SLIDER
+*/
+
+.slider-wrap { width: 419px; }
+
+.stripViewer .panelContainer .panel ul {
+    margin: 0 15px 0 30px;
+    text-align: left;
+}
+
+.stripViewer {
+    height: 282px;
+    overflow: hidden;
+    position: relative;
+    width: 419px;
+}
+
+.panelContainer {
+    height: 282px;
+    overflow: hidden;
+}
+
+.stripViewer .panelContainer {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+
+.stripViewer .panelContainer .panel {
+    float: left;
+    height: 100%;
+    width: 419px;
+}
+
+.stripNavL, .stripNavR, .stripNav { display: none; }
+
+.nav-thumb {
+    border: 1px solid black;
+    margin-right: 5px;
+}
+
+.movers-row { margin-top: 3px; }
+
+.movers-row div {
+    float: left;
+    margin-right: 4px;
+    width: 62px;
+}

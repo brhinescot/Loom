@@ -1,0 +1,53 @@
+<Project DefaultTargets="Debug" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <BuildDir>build</BuildDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReferences Include="src\**\*.csproj" Exclude="src\**\*Tests.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <DebugProjectReferences Include="src\**\*.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebProjectReferences Include="src\**\*.csproj" Exclude="src\**\*Tests.csproj;src\**\*Forms.csproj"/>
+  </ItemGroup>
+  <ItemGroup>
+    <VSFiles Include="src\**\bin\**\*.*" />
+    <VSFiles Include="src\**\obj\**\*.*" />
+  </ItemGroup>
+  <Import Project="tools\msbuild\MSBuild.Community.Tasks.Targets" />
+  <Target Name="Clean">
+    <RemoveDir Directories="$(BuildDir)" />
+    <MakeDir Directories="$(BuildDir)" Condition="!Exists('$(BuildDir)')" />
+    <Delete ContinueOnError="true" Files="@(VSFiles)" />
+  </Target>
+  <Target Name="Release" DependsOnTargets="Clean">
+    <MSBuild Properties="Configuration=Release;Platform=x86" Projects="@(ProjectReferences)" StopOnFirstFailure="true">
+      <Output TaskParameter="TargetOutputs" ItemName="BuildOutput" />
+    </MSBuild>
+    <MakeDir Directories="$(BuildDir)\release" Condition="!Exists('$(BuildDir)\release')" />
+    <Copy SourceFiles="@(BuildOutput)" DestinationFolder="$(BuildDir)\release" />
+  </Target>
+  <Target Name="Debug" DependsOnTargets="Clean">
+    <MSBuild Properties="Configuration=Debug;Platform=x86" Projects="@(DebugProjectReferences)" StopOnFirstFailure="true">
+      <Output TaskParameter="TargetOutputs" ItemName="BuildOutput" />
+    </MSBuild>
+    <CreateItem Include="src\**\bin\x86\Debug\*.pdb">
+      <Output TaskParameter="Include" ItemName="AdditionalFiles"/>
+    </CreateItem>
+    <MakeDir Directories="$(BuildDir)\debug" Condition="!Exists('$(BuildDir)\debug')" />
+    <Copy SourceFiles="@(BuildOutput)" DestinationFolder="$(BuildDir)\debug" />
+    <Copy SourceFiles="@(AdditionalFiles)" DestinationFolder="$(BuildDir)\debug" />
+  </Target>
+  <Target Name="Web" DependsOnTargets="Clean">
+    <MSBuild Properties="Configuration=Debug;Platform=x86" Projects="@(WebProjectReferences)" StopOnFirstFailure="true">
+      <Output TaskParameter="TargetOutputs" ItemName="BuildOutput" />
+    </MSBuild>
+    <CreateItem Include="src\**\bin\x86\Debug\*.pdb">
+      <Output TaskParameter="Include" ItemName="AdditionalFiles"/>
+    </CreateItem>
+    <MakeDir Directories="$(BuildDir)\web" Condition="!Exists('$(BuildDir)\web')" />
+    <Copy SourceFiles="@(BuildOutput)" DestinationFolder="$(BuildDir)\web" />
+    <Copy SourceFiles="@(AdditionalFiles)" DestinationFolder="$(BuildDir)\web" />
+  </Target>
+</Project>

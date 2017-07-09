@@ -1,0 +1,41 @@
+﻿<div>
+    <h3>Route Editor</h3>
+
+    <div class="tiles">Products/Wall Mounts/Motorized/Cantilever/Large/Black</div>
+
+    <script type="text/javascript">
+        var $tiles = $('.tiles');
+        var route = $tiles.text();
+        var tokens = route.split('/');
+        $tiles.empty();
+
+        var current = '#';
+        $.each(tokens,
+            function() {
+                current = current + this.toLowerCase() + '/';
+                $tiles.append('<a href="' + current + '" class="async"><span class="tile">' + this + '</span></a>');
+            });
+
+        $tiles.on('mouseover mouseout mousedown mouseup',
+            '.tile',
+            null,
+            function(e) {
+                e.preventDefault();
+                var $this = $(this);
+                switch (e.type) {
+                case "mouseover":
+                    $this.addClass("hover");
+                    break;
+                case "mouseout":
+                    $this.removeClass("hover press");
+                    break;
+                case "mousedown":
+                    $this.addClass("press");
+                    break;
+                case "mouseup":
+                    $this.removeClass("press");
+                    break;
+                }
+            });
+    </script>
+</div>

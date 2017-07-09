@@ -1,0 +1,16 @@
+#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom.Net.Resources
+
+[strings]
+#GENERAL MESSAGES
+
+#POP3 -ERR MESSAGES
+Pop3ErrorUsernameAlreadySpecfied = -ERR Username is already specified, valid commands are PASS or QUIT.
+Pop3ErrorUserAlreadyAuthenticated = -ERR User is already authenticated.
+Pop3ErrorUserNoUsername = -ERR Syntax error. Syntax:{USER username}.
+Pop3ErrorUserAlreadyLoggedIn(string username) = -ERR User:'{0}' is already logged in.
+
+#POP3 -OK MESSAGES
+Pop3OkUsernameOk(string username) = "+OK User:'{0}' ok."
+
+#EXCEPTIONS

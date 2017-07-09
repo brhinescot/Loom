@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+<configSections>
+  <section name="activeMapCodeGenConfiguration" type="Loom.Data.Mapping.Configuration.ActiveMapCodeGenConfigurationSection, Loom.Data"/>
+</configSections>
+<activeMapCodeGenConfiguration>
+  <provider
+    name="PortalDataSession"
+    type="Loom.Data.Mapping.Providers.SqlServerProvider, Loom.Data"
+    connectionString="Data Source=DEV8\SQLEXPRESS; Database=ColossusPortal; Integrated Security=true;"/>
+  <codeGen baseNamespace="Loom.Web.Portal.Data" useNullableTypes="true" generateProcedures="false"/>
+  <auditMapping modifiedOnColumn="ModifiedDate"/>
+  <tables enableAutoVersioning="false" explicitInclude="true" schemaIncludes="Portal;Security;Person">
+  </tables>
+</activeMapCodeGenConfiguration>
+</configuration>

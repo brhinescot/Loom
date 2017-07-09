@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="activeMapCodeGenConfiguration" type="Loom.Data.Mapping.Configuration.ActiveMapCodeGenConfigurationSection, Loom.Data.Mapping"/>
+  </configSections>
+  <activeMapCodeGenConfiguration>
+    <provider
+      name="OmniMountDataSession"
+      type="Loom.Data.Mapping.Providers.SqlServerProvider, Loom.Data.Mapping"
+      connectionString="Data Source=(local)\DEVELOPMENT; Database=OmniMount; Integrated Security=true;"/>
+    <codeGen baseNamespace="OmniMount" useNullableTypes="true"/>
+    <procedures explicitInclude="true"></procedures>
+    <tables>
+      <add name="ErrorLog" exclude="true"/>
+    </tables>
+  </activeMapCodeGenConfiguration>
+</configuration>

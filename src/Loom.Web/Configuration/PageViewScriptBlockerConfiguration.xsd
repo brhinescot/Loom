@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="pageViewScriptBlockerSettings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="extensions">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="add">
+                <xs:complexType>
+                  <xs:attribute name="extension" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="remove">
+                <xs:complexType>
+                  <xs:attribute name="extension" use="required" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="clear">
+                <xs:complexType />
+              </xs:element>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:attribute name="requestCycleSeconds" use="optional" type="xs:int" default="15" />
+      <xs:attribute name="maxRequestsPerCycle" use="optional" type="xs:int" default="30" />
+      <xs:attribute name="banMinutes" use="optional" type="xs:int" default="60" />
+      <xs:attribute name="extension" use="optional" type="xs:string" default=".aspx" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

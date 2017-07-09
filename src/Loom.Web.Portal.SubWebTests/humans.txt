@@ -1,0 +1,42 @@
+/* HUMANS BUILT THIS SITE - FEEL FREE TO EDIT YOURS */
+/* http://humanstxt.org */
+
+
+/* TEAM */
+  Colossus Interactive, LLC
+  PoweredBy: Colossus Portal
+  Site: http://www.colossusinteractive.com
+  Twitter: @ColossusInterac
+  Location: Seattle, WA
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: .Net, Colossus Portal, Modernizr, jQuery
+ 
+  
+  
+   s/.-://///////////////////////////////::.-+h
+ o.:yNMMMMMMMMMMMMMMNNNNNNNNNNNNNNNNNNNNmmmmho-.h
+/.sMMMMMMMMMMMMMMNNNNNNNNNNNNNNNNNNNmmmmmmmmmmd/.y
+.+MMMMMMMMMMMNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmdd-.
+.yMMMMMMNs/.`                       ``-+hmmmdddd/.
+.yMMMMMm.                                smddddd/.
+.yNNNNNo     syyyyyyyyyyyyyyysssssss-    .mddddd/.
+.yNNNNN:     mNNNNNNNNNmmmmmmmmmmmmm:    `mNNNNN+.
+-yNNNNN:     mNNNmmmmmm+---dmmmmmmNN:    `NNNNNN+-
+-yNNNNN:     mNNmmmmmmm:  `mNNNNNNNN: `.-/NNNNNN+-
+-yNNNNN:     mNmmmmmmmm/  `NMMNNNNNNmNNNNNNNNNNN+-
+-yNNNNN:     mmmmmmNNMM/  `NMNNNNNNNNNNNNNNNNNNN+-
+-smmmmm:     mmNNMNNNNN/  `NNNNNNNNNNNNNNNNNNNNN+-
+-smmmmm:    `NMMMNNNNNN/  `NNNNNNNNNNNNNNNNNNNNN+-
+-smmmmm:    `NMMNNNNNNN/  `mNNNNNNNNo/+sydNNNNmm+-
+:smmmmm:    `NMNNNNNNNN/  `mNNNNNNNN:    `mNNNNm+:
+:sdddmN:    `NNNNNNNNNNo:::mNNNNNNNN:    `mNNNNm+:
+:sdmNNN:     NNNNNNNNNNNNNNNNNNNNNNN:    `mNNNNm+:
+:smNNNNo     +++++++++++++++++++++++.    .NNNNNm+:
+:yNNNNNm-                               `yNNNNNmo:
+:yNNNNNNNy/-.````````````````````````-:omNNNNNmm+:
+:oNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmm//
+s/smNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmmd+/h
+ y/+ydmNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmhs/+m
+   ds+/++++++++++++++++++++++++++++++++++++/oyd

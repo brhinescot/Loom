@@ -1,0 +1,11 @@
+﻿#! culture_info = System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo
+#! resource_namespace = Loom.Web.Portal.Resources
+
+[strings]
+
+#EXCEPTIONS
+ExceptionSetupNotConfigured = Cannot serve the setup resources. The portal is not configured for setup. Set the configuration attribute 'setup' to true.
+ExceptionRoutesMoreThanOnePrimary(string) = More than one primary route was found to handle the path '{0}'.
+ExceptionInHttpPipeline = An exception occurred in the ASP.Net pipeline prior to initializing the portal request. Unable to continue. See the inner exception for more detail.
+ExceptionUnknownHost = Unknown host domain.
+ExceptionSectionNameExists = A section named {0} has already been added.

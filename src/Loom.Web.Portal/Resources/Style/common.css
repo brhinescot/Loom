@@ -1,0 +1,665 @@
+/*!This file created by Aivah                       
+ * Dated: 3rd Feb 2009	                             
+ * Copyright : 2009 Aivah.com                        
+ * Stylesheet: common.css 
+ */
+
+
+html, body, div, span, small, object, iframe, h1, h2, h3, h4, h5, h6, pre, a, abbr, blockquote, acronym, address, code, del, dfn, dl, dt, dd, em, img, q, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, b, p {
+    border: 0;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+p { margin: 11px 0 0 0; }
+
+img, input { behavior: url("iepngfix.htc") }
+
+body {
+    background: #d5d5d5;
+    color: #767676;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.clearfix { display: inline-block; }
+
+html[xmlns] .clearfix { display: block; }
+
+* html .clearfix { height: 1%; }
+
+#wrapper {
+    height: auto;
+    margin: auto;
+    width: 100%;
+}
+
+#toppart {
+    height: auto;
+    margin: auto;
+    width: 100%;
+}
+
+#footer {
+    background: #414141;
+    height: 100px;
+    margin: auto;
+    width: 100%;
+}
+
+p.copyright {
+    color: #cecece;
+    font: 1em Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+#pageHeader {
+    background: #ffffff url(../imageresource/header.gif) repeat-x bottom left;
+    height: 142px;
+    width: 100%;
+}
+
+.logo {
+    margin: auto;
+    padding: 0 0 0 0;
+}
+
+#header span {
+    color: #484848;
+    font: bold 1em Arial, Helvetica, sans-serif;
+    padding: 30px 30px;
+}
+
+#header span small {
+    color: #f64e40;
+    font: 11px Arial, Helvetica, sans-serif;
+}
+
+.logo a:link { color: #484848; }
+
+.logo a:hover { color: #ffffff; }
+
+/* ================================================= */
+
+/* 	 COLUMN CSS                               */
+
+/* ================================================= */
+
+#middlepart {
+    background: #d5d5d5;
+    height: 100%;
+    margin: auto;
+    overflow: auto;
+    padding: 20px 20px;
+}
+
+#leftcolumn {
+    background: #ffffff;
+    float: left;
+    padding: 10px 10px;
+    width: 70%;
+}
+
+#rightcolumn {
+    background: #ffffff;
+    float: right;
+    padding: 10px;
+    width: 25%;
+}
+
+/* ================================================= */
+
+/* 	 ToP MENU CSS                               */
+
+/* ================================================= */
+
+#menu {
+    background: #414141 url(../imageresource/menu.gif) repeat-x;
+    height: 31px;
+    width: 100%;
+}
+
+#menu .topmenu {
+    margin: auto;
+    width: 900px;
+}
+
+/* ================================================= */
+
+/* 	 Settings MENU   CSS                               */
+
+/* ================================================= */
+
+.settingsblock {
+    background: #414141 url(../imageresource/settingsbg.gif) top left repeat-x;
+    clear: both;
+    height: 70px;
+    margin: auto 0 0px 0;
+    padding: 0px 10px 5px 10px;
+    width: auto;
+}
+
+.settingsblock div {
+    color: #CCCCCC;
+    float: left;
+    font: normal 2em Arial, Helvetica, sans-serif;
+    padding: 20px 0 0 10px;
+}
+
+.settingsblock div a:visited, .settingsblock div a:active, .settingsblock div a:link {
+    background: url(../imageresource/arrow.gif) 0% 50% no-repeat;
+    float: left;
+    padding: 10px 10px;
+}
+
+.settingsblock img { vertical-align: middle; }
+
+.settingsblock a:link, .settingsblock a:visited, .settingsblock a:active {
+    border: 0px solid #d9d9d9;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    font: normal 10px tahoma, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    text-align: center;
+}
+
+.settingsblock a:hover { color: #f64e40; }
+
+/* ================================================= */
+
+/* 	 SUB MENU   CSS                               */
+
+/* ================================================= */
+
+#submenu {
+    background: #fff URL(../imageresource/submenu.gif) top left repeat-x;
+    padding: 1px 10px;
+}
+
+#submenu ul {
+    margin: 0;
+    padding: 5px;
+}
+
+#submenu li {
+    display: inline;
+    font-weight: bold;
+    list-style: none;
+    margin: 0 3px 0 0;
+    padding: 4px 10px;
+}
+
+#submenu li a { color: #ececec; }
+
+#submenu li:hover {
+    background: URL(../imageresource/menutop.gif) 50% 0% no-repeat;
+    color: #fff;
+}
+
+#submenu li.iehoversm {
+    background: URL(../imageresource/menutop.gif) 50% 0% no-repeat;
+    color: #fff;
+}
+
+#submenu li a:hover { color: #fff; }
+
+/* ================================================= */
+
+/* 	 SIDEBAR MENU CSS                              */
+
+/* ================================================= */
+
+#sidebarmenu {
+    background: #fff;
+    padding: 1px 0px;
+}
+
+#sidebarmenu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+
+#sidebarmenu li {
+    background: #ededed;
+    border-left: 5px solid #414141;
+    font-weight: bold;
+    line-height: 25px;
+    list-style: none;
+    margin: 0 0px 1px 0;
+    padding: 4px 10px;
+}
+
+#sidebarmenu li a { color: #414141; }
+
+#sidebarmenu li:hover { color: #f64e40; }
+
+#sidebarmenu li a:hover { color: #f64e40; }
+
+#sidebarmenu .activesub { color: #f64e40; }
+
+/* ================================================= */
+
+/* 	 SEARCH BAR CSS ITEMS                          */
+
+/* ================================================= */
+
+.searchbar {
+    color: #fff;
+    float: right;
+    padding: 3px 20px 0 0;
+    text-transform: uppercase;
+}
+
+.searchbar input { padding: 0px 10px; }
+
+#submenu img { vertical-align: middle; }
+
+/* ================================================= */
+
+/* 	 Login Box CSS ITEMS                              */
+
+/* ================================================= */
+
+.loginform {
+    border-top: 0px solid #414141;
+    padding: 10px;
+}
+
+#login form .remember { float: left; }
+
+form.loginform label { float: left; }
+
+form.loginform input { clear: left; }
+
+#login .forgot {
+    clear: both;
+    float: left;
+}
+
+#login form .submit input {
+    background: #39b54a;
+    border: none;
+    color: #ffffff;
+    padding: 3px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#login form .submit input:hover {
+    background: #007236;
+    border: none;
+    color: #ffffff;
+    padding: 3px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+form .submit { float: right; }
+
+#login {
+    margin: 1em auto;
+    width: 550px;
+}
+
+#userpass, #userpassconfirm, #userlogin, #useremail {
+    font-size: 12px;
+    padding: 3px;
+    width: 97%;
+}
+
+.vmiddle { vertical-align: middle; }
+
+/* ================================================= */
+
+/* 	 COMMON CSS ITEMS                              */
+
+/* ================================================= */
+
+a:link, a:visited, a:active {
+    color: #484848;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f64e40;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 250%;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 210%;
+    font-weight: normal;
+    margin: 8px 0;
+}
+
+h3 {
+    font-size: 180%;
+    font-weight: normal;
+    margin: 7px 0;
+}
+
+h4 {
+    font-size: 140%;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+h5 {
+    font-size: 110%;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+h6 {
+    font-size: 92.5%;
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+pre, code {
+    color: #484848;
+    font: 1em/1.4em "Courier News", monospace;
+    line-height: 1.5em;
+}
+
+/* ================================================= */
+
+/* 	 MESSAGE BOX CSS                               */
+
+/* ================================================= */
+
+.success {
+    background: #e0ecd1 url(../imageresource/success.gif) no-repeat 12px 50%;
+    border: 1px solid #60a400;
+    border-width: 5px 0 0 0;
+    color: #60a400;
+}
+
+.error {
+    background: #ffe3e1 url(../imageresource/error.gif) no-repeat 12px 50%;
+    border: 1px solid #f14545;
+    border-width: 5px 0 0 0;
+    color: #f14545;
+}
+
+.notice {
+    background: #fff0db url(../imageresource/warning.gif) no-repeat 12px 50%;
+    border: 1px solid #e7a74c;
+    border-width: 5px 0 0 0;
+    color: #e7a74c;
+}
+
+.notice, .success, .error {
+    font-size: 100%;
+    margin: 0 0 20px 0;
+    padding: 10px;
+    text-align: left;
+    width: auto;
+}
+
+.notice span, .success span, .error span {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 40px;
+}
+
+.success p, .error p, .notice p {
+    color: #333333;
+    margin: 0;
+    padding: 0 40px;
+}
+
+/* ================================================= */
+
+/* 	 LIST ITEMS CSS                                   */
+
+/* ================================================= */
+
+.nums ul {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.nums li { list-style: decimal; }
+
+.squares ul {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.squares li {
+    list-style: square;
+    padding: 0;
+}
+
+.circles ul {
+    float: right;
+    margin: 0 10px;
+    padding: 0 10px;
+}
+
+.circles li {
+    list-style: circle;
+    vertical-align: top;
+}
+
+/* ================================================= */
+
+/* 	 RIGHTCOLUMN BOX CSS                               */
+
+/* ================================================= */
+
+.notes {
+    background: #e8e8e8;
+    border: 1px solid #c5c5c5;
+    border-top: 7px solid #414141;
+}
+
+.notes {
+    color: #484848;
+    font-size: 100%;
+    margin: 0 0 10px 0;
+    padding: 20px;
+    text-align: left;
+    width: auto;
+}
+
+.notes p {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.notes span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+/* ================================================= */
+
+/* 	 PAGINATION CSS                               */
+
+/* ================================================= */
+
+.pagelink {
+    background: #e7e8e8 url(../imageresource/page.gif) repeat-x bottom left;
+    border: 1px solid #b2b2b2;
+    clear: both;
+    color: #787878;
+    line-height: 35px;
+    text-decoration: none;
+    width: 10px;
+}
+
+a.pagelink:active, a.pagelink:visited, a.pagelink:link {
+    background: url(../imageresource/page.gif) repeat-x bottom left;
+    border: 1px solid #b2b2b2;
+    color: #787878;
+    padding: 6px;
+    width: 10px;
+}
+
+a.pagelink:hover {
+    background: #fff url(../imageresource/page.gif) repeat-x bottom left;
+    border: 1px solid #b2b2b2;
+    color: #f64e40;
+    padding: 6px;
+    width: 10px;
+}
+
+.pagecurrent {
+    background: #fff url(../imageresource/page.gif) repeat-x bottom left;
+    border: 1px solid #b2b2b2;
+    color: #f64e40;
+    padding: 6px;
+    width: 10px;
+}
+
+/* ================================================= */
+
+/* 	 Small Box CSS                               */
+
+/* ================================================= */
+
+.mainbox { width: auto; }
+
+div.boxcontainer {
+    background: #ffffff url(../imageresource/boxb.gif) repeat-x top left;
+    border: 1px solid #c6c6c6;
+    color: #888;
+    float: left;
+    font: normal 10px Tahoma, Arial, Helvetica, sans-serif;
+    margin: 0 0 1% 1%;
+    min-height: 100px;
+    padding: 5px;
+    width: 30%;
+}
+
+.boxcontainer h4 {
+    float: none;
+    font-family: Arial, Tahoma, Verdana, Sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 2px;
+}
+
+.boxcontainer h4 { padding: 5px 0 5px 0; }
+
+a img.box_thumb, a:visited img.box_thumb {
+    background: #7a7a7a;
+    border: 1px solid #7a7a7a;
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+a:hover img.box_thumb { background: #fff; }
+
+
+
+/* ================================================= */
+
+/* 	 TABLE BUTTONS CSS                               */
+
+/* ================================================= */
+
+a.submit:visited, a.submit:active, a.submit:link,
+a.add:visited, a.add:active, a.add:link,
+a.publish:visited, a.publish:active, a.publish:link,
+a.edit:visited, a.edit:active, a.edit:link,
+a.delete:visited, a.delete:active, a.delete:link,
+a.reset:visited, a.reset:active, a.reset:link {
+    color: #fff;
+    font: bold 10px "Lucida Grande", Arial, Helvetica, sans-serif;
+    margin: 0 2px 0 0;
+    padding: 2px 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: auto;
+}
+
+a.publish {
+    background: #afd2ea;
+    color: #ffffff;
+}
+
+a.publish:hover {
+    background: #0072bc;
+    color: #ffffff;
+}
+
+a.edit {
+    background: #949ca1;
+    color: #000000;
+}
+
+a.edit:hover {
+    background: #727c82;
+    color: #ffffff;
+}
+
+a.delete {
+    background: #ffb5b5;
+    color: #ffffff;
+}
+
+a.delete:hover {
+    background: #d80047;
+    color: #ffffff;
+}
+
+a.add {
+    background: #99d177;
+    color: #ffffff;
+}
+
+a.add:hover {
+    background: #00a651;
+    color: #ffffff;
+}
+
+a.reset {
+    background: #96aabf;
+    color: #ffffff;
+}
+
+a.reset:hover {
+    background: #6f7f90;
+    color: #ffffff;
+}
+
+a.submit {
+    background: #12486b;
+    color: #ffffff;
+}
+
+a.submit:hover {
+    background: #000000;
+    color: #ffffff;
+}

@@ -1,0 +1,5 @@
+﻿<Loom.Web.Configuration>
+  <documentRedirectSettings>
+    <defaultDocument path="" />
+  </documentRedirectSettings>
+</Loom.Web.Configuration>

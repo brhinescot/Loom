@@ -1,0 +1,24 @@
+﻿a { color: #8f4728; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #8f4728;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #8f4728;
+    border-color: #793c22;
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    background-color: #6e371f;
+    border-color: #4b2515;
+}
+
+.tiles .tile {
+    background-color: #8f4728;
+    color: #fff;
+}
+
+.tiles .tile.press { background-color: #b75b33; }

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Loom.Web.Portal.Configuration>
+    <portalSettings setup="false" enabledTenants="false">
+        <assets base="/">
+            <add name="images" value="/content/images" />
+            <add name="videos" value="/content/videos" />
+            <add name="script" value="/content/script" />
+            <add name="style" value="/content" />
+        </assets>
+        <imageCache quality="90" cacheTime="60"/>
+        <thumbnails quality="90" cacheTime="60">
+            <add name="icon" suffix="i" maxSize="32" />
+            <add name="avatar" suffix="a" maxSize="64" minSize="32" />
+            <add name="small" suffix="s" maxSize="150" />
+            <add name="medium" suffix="m" maxSize="300" />
+            <add name="large" suffix="l" maxSize="450" />
+        </thumbnails>
+        <routes allowDatabaseRoutes="true" allowPhysicalPages="false">
+            <add name="" expression="" controller="" />
+        </routes>
+        <languages default="English">
+            <add name="English" value="en-US" />
+        </languages>
+        <jQuery version="1.6.2" debug="false" cdn="Google" disableFallback="false" />
+        <modernizer version="2.0.6" debug="false" />
+        <virtualResources>
+            <add name="" namespace="" assembly="" />
+        </virtualResources>
+        <tenants>
+            <add domain="" tenant=""></add>
+        </tenants>
+    </portalSettings>
+</Loom.Web.Portal.Configuration>

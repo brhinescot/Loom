@@ -1,0 +1,24 @@
+BODY {
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+
+#mainBox { background-color: #FFFFFF; }
+
+#headerBox { background-color: #D3DFF8; }
+
+TD { padding: 0 18px 0 0; }
+
+#repeater .itemTemplate {
+    border: 1px solid #DDD;
+    float: left;
+    height: 180px;
+    margin: 12px;
+    padding: 12px;
+    width: 280px;
+}
+
+#footerBox {
+    background-color: #3A4759;
+    height: 177px;
+}

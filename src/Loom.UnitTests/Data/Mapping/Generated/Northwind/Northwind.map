@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="activeMapCodeGenConfiguration" type="Loom.Data.Mapping.Configuration.ActiveMapCodeGenConfigurationSection, Loom.Data.Mapping"/>
+  </configSections>
+  <activeMapCodeGenConfiguration>
+    <provider
+      name="NorthwindDataSession"
+      type="Loom.Data.Mapping.Providers.SqlServerProvider, Loom.Data.Mapping"
+      connectionString="Data Source=(local)\DEVELOPMENT; Database=Northwind; Integrated Security=true;"/>
+    <codeGen baseNamespace="Northwind" useNullableTypes="true" generateProcedures="false"/>
+  </activeMapCodeGenConfiguration>
+</configuration>

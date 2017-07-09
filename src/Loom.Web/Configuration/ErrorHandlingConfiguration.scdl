@@ -1,0 +1,6 @@
+﻿<Loom.Web.Configuration>
+  <errorHandlingSettings defaultRedirect="" defaultMessage="">
+    <fileNotFound redirect="" message=""/>
+    <maliciousInput redirect="" message=""/>
+  </errorHandlingSettings>
+</Loom.Web.Configuration>

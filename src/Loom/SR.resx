@@ -1,0 +1,233 @@
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="culture_info">
+    <value>System.Globalization.CultureInfo.InvariantCulture, System.Globalization.CultureInfo</value>
+  </resheader>
+  <resheader name="resource_namespace">
+    <value>Loom</value>
+  </resheader>
+  <data name="ExceptionDetails" xml:space="preserve">
+    <value>Exception Details:</value>
+  </data>
+  <data name="ExceptionSummary" xml:space="preserve">
+    <value>Environment Summary for</value>
+  </data>
+  <data name="ExceptionType" xml:space="preserve">
+    <value>Exception Type</value>
+  </data>
+  <data name="ExceptionStackTraceDetails" xml:space="preserve">
+    <value>StackTrace:</value>
+  </data>
+  <data name="ExceptionByteArrayValueMustBeGreaterThanZeroBytes" xml:space="preserve">
+    <value>The value must be greater than 0 bytes.</value>
+  </data>
+  <data name="ExceptionCastingHashAlgorithmInstance" xml:space="preserve">
+    <value>Type must inherit from HashAlgorithm.</value>
+  </data>
+  <data name="ExceptionCastingSymmetricAlgorithmInstance" xml:space="preserve">
+    <value>Type must inherit from SymmetricAlgorithm.</value>
+  </data>
+  <data name="ExceptionCreatingHashAlgorithmInstance" xml:space="preserve">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionCreatingSymmetricAlgorithmInstance" xml:space="preserve">
+    <value>Unable to load algorithm.</value>
+  </data>
+  <data name="ExceptionDecrypting" xml:space="preserve">
+    <value>Unable to decrypt data.</value>
+  </data>
+  <data name="ExceptionEmptyString" xml:space="preserve">
+    <value>The value of '{0}' can not be an empty string.</value>
+    <comment>string variableName</comment>
+  </data>
+  <data name="ExceptionEnumerationNotDefined" xml:space="preserve">
+    <value>{0} is not a valid value for {1}.</value>
+    <comment>string variable, string enumName</comment>
+  </data>
+  <data name="ExceptionExpectedType" xml:space="preserve">
+    <value>The type is invalid. Expected type '{0}'.</value>
+    <comment>string typeName</comment>
+  </data>
+  <data name="ExceptionInvalidType" xml:space="preserve">
+    <value>The type '{0}' specified is not valid..</value>
+    <comment>string typeName</comment>
+  </data>
+  <data name="ExceptionInvalidNullNameArgument" xml:space="preserve">
+    <value>The name for the '{0}' can not be null or an empty string.</value>
+    <comment>string messageName</comment>
+  </data>
+  <data name="ExceptionObjectDisposedCanNotRenew" xml:space="preserve">
+    <value>The object has been disposed and can not be renewed.</value>
+  </data>
+  <data name="ExceptionTimeoutWaitingForLock" xml:space="preserve">
+    <value>Timeout waiting for thread lock.</value>
+  </data>
+  <data name="ExceptionItemCountMustBeGreaterThanZero" xml:space="preserve">
+    <value>The number of items must be greater than zero.</value>
+  </data>
+  <data name="ExceptionFileNotFound" xml:space="preserve">
+    <value>Could not find file named {0}.</value>
+    <comment>string fileName</comment>
+  </data>
+  <data name="ExceptionArgumentMustBeNonNegative" xml:space="preserve">
+    <value>Value can not be less than zero.</value>
+  </data>
+  <data name="ExceptionArgumentMustBeGreaterThanZero" xml:space="preserve">
+    <value>Value must be greater than zero.</value>
+  </data>
+  <data name="ExceptionNonParsablePhoneNumber" xml:space="preserve">
+    <value>The phone number is not in a parsable format.</value>
+  </data>
+  <data name="ExceptionPropertyNotNull" xml:space="preserve">
+    <value>Property can not be null.</value>
+  </data>
+  <data name="ExceptionServerBindingIsNull" xml:space="preserve">
+    <value>The server binding is null. Unable to continue.</value>
+  </data>
+  <data name="ExceptionDelimitedArrayIndexOutOfBounds" xml:space="preserve">
+    <value>Index '{0}' was outside the bounds of the delimited array segment.</value>
+    <comment>int index</comment>
+  </data>
+  <data name="ExceptionArgArrayPlusOffTooSmall" xml:space="preserve">
+    <value>Destination array is not long enough to copy all the items in the collection. Check array index and length.</value>
+  </data>
+  <data name="ExceptionArgInvalidArrayType" xml:space="preserve">
+    <value>Target array type is not compatible with the type of items in the collection.</value>
+  </data>
+  <data name="ExceptionNotSupportedReadOnlyCollection" xml:space="preserve">
+    <value>Collection is read-only.</value>
+  </data>
+  <data name="ExceptionArgumentWrongType" xml:space="preserve">
+    <value>The value "{0}" is not of type "{1}" and cannot be used in this generic collection.</value>
+    <comment>string value, Type type</comment>
+  </data>
+  <data name="PasswordLessThanMinimumLength" xml:space="preserve">
+    <value>Password length can not be less than {0}.</value>
+    <comment>int length</comment>
+  </data>
+  <data name="ExceptionObjectDisposed" xml:space="preserve">
+    <value>The object {0} has been disposed. A call to {1} is not allowed.</value>
+    <comment>string name, string member</comment>
+  </data>
+  <data name="ExceptionDefaultImplementationNotFound" xml:space="preserve">
+    <value>Could not locate a default implementation for type {0}.</value>
+    <comment>string typeName</comment>
+  </data>
+  <data name="ExceptionTypeAlreadyRegistered" xml:space="preserve">
+    <value>The type {0} has already been registered.</value>
+    <comment>string typeName</comment>
+  </data>
+  <data name="ExceptionNoConstructorsDefined" xml:space="preserve">
+    <value>The type {0} has no constructors defined.</value>
+    <comment>string typeName</comment>
+  </data>
+  <data name="ExceptionInvalidCastFromTo" xml:space="preserve">
+    <value>Invalid cast from '{0}' to '{1}'.</value>
+    <comment>string from, string to</comment>
+  </data>
+  <data name="ExpressionMoney" xml:space="preserve">
+    <value>^\$?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$</value>
+  </data>
+  <data name="ExpressionAnyDigits" xml:space="preserve">
+    <value>^\d{1,}$</value>
+  </data>
+  <data name="ExpressionZipCode" xml:space="preserve">
+    <value>^(\d{5}-\d{4}|\d{5})$|^([a-zA-Z]\d[a-zA-Z] \d[a-zA-Z]\d)$</value>
+  </data>
+  <data name="ExpressionEmailAddress" xml:space="preserve">
+    <value>^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9_\-]+\.)+))(com|net|org|cc|us|edu)(\]?)$</value>
+  </data>
+  <data name="ExpressionCityName" xml:space="preserve">
+    <value>^[a-zA-Z\s\.\-]{1,}$</value>
+  </data>
+  <data name="ExpressionNotMalicious" xml:space="preserve">
+    <value>^([A-Za-z0-9@.\s\[\]/]{1,255})$</value>
+  </data>
+  <data name="ExpressionWordsOnly" xml:space="preserve">
+    <value>^([\(\)/&amp;A-Za-z0-9'#@.\s,-]{1,255})$</value>
+  </data>
+  <data name="ExpressionIpAddress" xml:space="preserve">
+    <value>((25[0-5]|2[0-4]\d|1?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|1?\d{1,2})</value>
+  </data>
+  <data name="ExpressionSocialSecurityNUmber" xml:space="preserve">
+    <value>^(?!000)(?!588)(?!666)(?!69[1-9])(?!73[4-9]|7[4-5]\d|76[0-3])(?&lt;SSN3&gt;[0-6]\d{2}|7(?:[0-6]\d|7[012]))([-]?)(?!00)(?&lt;SSN2&gt;\d\d)\1(?!0000)(?&lt;SSN4&gt;\d{4})$</value>
+  </data>
+  <data name="ExpressionGuid" xml:space="preserve">
+    <value>^(\{){0,1}[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}(\}){0,1}$</value>
+  </data>
+  <data name="ExpressionPhoneNumber" xml:space="preserve">
+    <value>^\+?(?&lt;countrycode&gt;\d{0,5})\s?\(?(?&lt;areacode&gt;[2-9]\d{2})(?:\)\s?|-|.)(?&lt;exchange&gt;\d{3})(?:-|.)(?&lt;number&gt;\d{4})(?:\s*?[xX]\s*(?&lt;extension&gt;\d{1,5}))?$</value>
+  </data>
+  <data name="ExpressionHighStrongPassword" xml:space="preserve">
+    <value>^.*(?=.{10,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W+).*$</value>
+  </data>
+  <data name="ExpressionMediumStrongPassword" xml:space="preserve">
+    <value>(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$</value>
+  </data>
+  <data name="ExpressionLowStrongPassword" xml:space="preserve">
+    <value>^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$</value>
+  </data>
+  <data name="InvalidHexString" xml:space="preserve">
+    <value>String must represent a valid hexadecimal (e.g. : 0F99DD).</value>
+  </data>
+  <data name="GenericInvalidData" xml:space="preserve">
+    <value>Invalid data.</value>
+  </data>
+</root>
